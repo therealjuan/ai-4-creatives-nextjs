@@ -1,0 +1,58 @@
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["fullTextSearch", "fullTextIndex"]
+}
+
+datasource db {
+  provider = "mysql"
+  url = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model Category {
+  id      String @id @default(uuid())
+  name    String
+  key     String @unique
+  tools   Tool[]
+}
+
+model Tool {
+  id            String @id @default(uuid())
+  name          String @db.Text
+  source        String
+  image         String
+  sourceLink    String @db.LongText
+  link          String @db.LongText
+  parent        String 
+  description   String @db.Text
+
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  category      Category @relation(fields: [categoryId], references: [id])
+  categoryId    String
+  categoryName  String
+
+  @@index([categoryId])
+  @@fulltext([name])
+
+}
+
+model HomepageCard {
+  id            String @id @default(uuid())
+  description   String
+  source        String @db.LongText
+  image         String @db.LongText
+  date          String
+  time          String
+  callToAction  String
+  cardType      String
+}
+
+model PickedTool {
+  id            String @id @default(uuid())
+  image         String
+  description   String
+  source        String @db.LongText
+  date          String
+}
