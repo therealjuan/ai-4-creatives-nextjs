@@ -2,10 +2,12 @@
 
 import Iframe from 'react-iframe'
 import { useEffect, useState } from "react";
+import {useTranslations} from 'next-intl';
 
 const SubmitToolPage = () => {
 
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+    const t = useTranslations('Submit');
 
     useEffect(() => {
         const handleMouseMove = (event: MouseEvent) => {
@@ -22,11 +24,12 @@ const SubmitToolPage = () => {
         <div className="px-8">
             <div className="grid grid-cols-8 gap-12 mb-0">
                 <div className="col-span-8 text-xl leading-8 lg:col-span-4">
-                    <h1 className="mb-0 font-black tracking-tight pb-4 text-8xl dark:text-white w-full leading-tight" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px` }}>Submit a tool</h1>
-                    <p className="text-xl mb-20">Are you ready to dazzle us with your tool-tastic skills? <br></br> Well, put on your tool belt and let's get started!</p>
-                    <h2 className="font-black text-4xl leading-tight mb-6" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`}}>Human curated</h2>
-                    <p className="mb-6">Let's make sure your tool passes the Tool-o-meter. This device measures a tool's awesomeness on a scale from "meh" to "mind-blowing." We don't accept anything lower than a "pretty cool". The curation is manual. Within a week, you'll be notified with updates.Remember, safety first! Please, no tools that involve shark tanks or jet engines. We're still cleaning up from last time.</p>
-                    <h2 className="font-black text-4xl leading-tight mb-6" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`}}>Thank you</h2>
+                    <h1 className="mb-0 font-black tracking-tight pb-4 text-8xl dark:text-white w-full leading-tight" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px` }}>{t("headline")}</h1>
+                    <p className="text-xl mb-2">{t.rich("p1")}</p>
+                    <p className="text-xl mb-20">{t.rich("p2")}</p>
+                    <h2 className="font-black text-4xl leading-tight mb-6" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`}}>{t("headline2")}</h2>
+                    <p className="mb-6">{t("p3")}</p>
+                    <h2 className="font-black text-4xl leading-tight mb-6" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`}}>{t("thank")}</h2>
                 </div>
                 <div className='col-span-8 h-full rounded-lg overflow-hidden lg:col-span-4 md:pt-[3rem]'>
                   <Iframe 

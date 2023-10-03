@@ -8,7 +8,16 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 
-export const NewsletterForm = () => {
+interface NewsletterFormProps {
+    stay: string;
+    toolbox: string;
+    join: string;
+    placeholder: string;
+    subscribe: string;
+    thank: string;
+  }  
+
+export const NewsletterForm = ({ stay, toolbox, join, placeholder, subscribe, thank}: NewsletterFormProps) => {
 
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [subscribed, setSubscribed] = useState(false);
@@ -47,7 +56,6 @@ export const NewsletterForm = () => {
         
         const responseData = await response.json();
         if (!response.ok) {
-            alert("submitting form failed!");
             return;
         } else {
             setSubscribed(true);
@@ -60,8 +68,6 @@ export const NewsletterForm = () => {
                     type: "server",
                     message: errors.email,
                 });
-            } else {
-                alert("something went wrong!");
             }
         }
         reset();
@@ -71,25 +77,25 @@ export const NewsletterForm = () => {
         <div id="newsletter">
             <h2 className="mb-4 text-5xl pb-4 font-black tracking-tight leading-extra w-full" style={{
                     backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`,
-                }}>Stay in the know:<br/>Upgrade your toolbox</h2>
-            <p className="mb-8 text-xl">Join our AI for Creatives newsletter and get ready to LOL like a creative boss!</p>
+                }}>{stay}<br/>{toolbox}</h2>
+            <p className="mb-8 text-xl">{join}</p>
                 <form onSubmit={handleSubmit(onSubmit)} className='pb-10'>
                     <div className='flex w-full gap-4'>
                         <Input 
                             {...register("email")} 
                             type="email"
                             onChange={() => setSubscribed(false)}
-                            placeholder="Share your email, receive the awesome!" 
+                            placeholder={placeholder}
                             className='bg-white text-xl box-border pb-[.6rem] h-auto rounded-none w-full' 
                             id="email" 
                         /> 
-                        <Button size="sm" disabled={isSubmitting} className='bg-black text-xl p-6 rounded-none hover:bg-green-500 hover:text-black'>Subscribe</Button>
+                        <Button size="sm" disabled={isSubmitting} className='bg-black text-xl p-6 rounded-none hover:bg-green-500 hover:text-black'>{subscribe}</Button>
                     </div>
                     {errors.email && (
                         <p className="mb-8 p-2 text-xl text-black">{`${errors.email.message}`}</p>
                     )}
                     {subscribed && (
-                        <p className="mb-8 p-2 text-lg text-black">Thank you! Your submission has been received!</p>
+                        <p className="mb-8 p-2 text-lg text-black">{thank}</p>
                     )}                    
                 </form>
         </div>

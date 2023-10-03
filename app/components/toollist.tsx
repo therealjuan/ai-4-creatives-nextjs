@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button";
 
 import GetCategoryFromURL from "./getCategoryFromURL";
 import transformToString from "./transformToString";
-
+import {useTranslations} from 'next-intl';
 import Image from 'next/image';
 import linkImage from '/public/diagonal-arrow-dark.svg'
 import FlipButton from './flipButton';
@@ -63,6 +63,8 @@ export const ToolList = ({
     const defaultItems = 20;
     const [showAll, setShowAll] = useState(false);
 
+    const t = useTranslations('Index.tools');
+
     let selectedCategory = GetCategoryFromURL();
 
      // Filter the data based on selectedCategory
@@ -82,7 +84,7 @@ export const ToolList = ({
             </div>
             {displayedData.map((item, index) => (
             <div className={`gap-2 py-3 transition-all ${index < displayedData.length - 1 ? 'border-b-[1px] border-gray-500' : ''}`} key={item.id}>
-                <div className="w-full max-w-[95%] gap-8 mx-auto py-8 flex flex-col lg:flex-row">
+                <div className="w-full px-8 gap-8 mx-auto py-8 flex flex-col lg:flex-row">
                     <div className="lg:w-1/5 flex flex-col justify-space-between self-stretch">
                         <a href={item.link} className='flex gap-2' target="_blank">
                             <span className="font-bold color-white text-3xl product-description-title px-[0.2rem] pb-[0.3rem] hover:text-green-500">{item.name}</span>
@@ -129,7 +131,7 @@ export const ToolList = ({
             {!showAll && filteredData.length > defaultItems && (
                 <div className="">
                     <Button onClick={() => setShowAll(true)} className="w-full rounded-none bg-black hover:bg-green-500 hover:text-black text-xl p-8">
-                        Show all tools
+                        {t("showAllTools")}
                     </Button>
                 </div>
             )}

@@ -8,8 +8,14 @@ import { HamburgerMenuIcon, Cross1Icon } from '@radix-ui/react-icons'
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
+interface HeaderProps {
+    follow: string;
+    subscribe: string;
+    contact: string;
+    submit: string;
+  }  
 
-export const Header = () => {
+export const Header = ({ follow, subscribe, contact, submit }: HeaderProps) => {
         const [isMenuOpen, setIsMenuOpen] = useState(false);
 
         // Function to handle scrolling to a specific element
@@ -51,10 +57,10 @@ export const Header = () => {
                 </div>
                 <ul className={`max-lg:block flex max-lg:absolute right-0 z-50 items-center max-lg:z-auto max-lg:static max-lg:bg-black max-lg:text-white w-auto gap-6 pl-7 pt-2 pb-4 top-6 
                             max-lg:left-0 max-lg:top-24 max-lg:pl-8 min-lg:py-0 max-lg:absolute max-lg:top-0 text-xl ${isMenuOpen ? 'max-lg:opacity-100' : 'max-lg:opacity-0'}`}>
-                    <li className="py-3"><Link className="hover:text-green-500" href="https://twitter.com/ai_forcreatives" target="_blank">@Follow us</Link></li>
-                    <li className="py-3"><Link className="hover:text-green-500" href="mailto:hello@aiforcreativ.es">Contact</Link></li>
-                    <li className="py-3"><Link className="hover:text-green-500" href="/submit">Submit a tool</Link></li>
-                    <li className="py-3"><Button size="lg" onClick={() => scrollToElement()} className='text-xl px-4 py-6 rounded-none bg-black max-lg:p-0 max-lg:h-auto hover:bg-green-500 hover:text-black'>Subscribe</Button></li>
+                    <li className="py-3"><Link className="hover:text-green-500" href="https://twitter.com/ai_forcreatives" target="_blank">{follow}</Link></li>
+                    <li className="py-3"><Link className="hover:text-green-500" href="mailto:hello@aiforcreativ.es">{contact}</Link></li>
+                    <li className="py-3"><Link className="hover:text-green-500" href="/submit">{submit}</Link></li>
+                    <li className="py-3"><Button size="lg" onClick={() => scrollToElement()} className='text-xl px-4 py-6 rounded-none bg-black max-lg:p-0 max-lg:h-auto hover:bg-green-500 hover:text-black'>{subscribe}</Button></li>
                 </ul>
             </div>
         </div>

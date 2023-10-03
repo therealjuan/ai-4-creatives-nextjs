@@ -2,7 +2,7 @@ import {
     Card
   } from "@/components/ui/card"
 
-import Image from 'next/image'
+  import { useTranslations } from "next-intl";
 
 interface DataProps {
     image: string;
@@ -16,11 +16,15 @@ interface DataProps {
     cardType: string;
   }
 
+  
 export const HomeCard = ({
     data,
     callToAction,
     cardType
 }: HomeCardProps) => {
+
+    const t = useTranslations("Index");
+    
     if (!data) return null;
 
     return (

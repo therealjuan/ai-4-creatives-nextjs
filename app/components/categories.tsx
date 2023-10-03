@@ -3,11 +3,9 @@
 import qs from "query-string";
 import { Category } from "@prisma/client";
 import { cn } from "@/lib/utils";
-
 import transformToString from "./transformToString";
-
 import { useRouter, useSearchParams } from "next/navigation";
-
+import {useTranslations} from 'next-intl';
 
 interface CategoriesProps {
     data: Category[];
@@ -21,6 +19,8 @@ export const Categories = ({
     const searchParams = useSearchParams();
     const selectedCategory = transformToString(searchParams.get("category"));
 
+    const t = useTranslations('Index.categories');
+    
     const onClick = (id: string | undefined) => {
         const query = { category: id };
         const url = qs.stringifyUrl({
@@ -89,17 +89,17 @@ export const Categories = ({
                         `, item.key === selectedCategory ? "bg-green-500 text-black hover:bg-green-500 hover:text-black" : "text-green-500 hover:bg-green-500 hover:text-black")}>{item.name}</button>     
                 ))}
                                 <button 
-                    onClick={() => scrollToElement()} className={cn(`text-green-500 bg-transparent text-xl border-b-1 mx-1 mb-2 border-b border-green-500 hover:text-black hover:border-black`)}>Subscribe for updates</button>            
+                    onClick={() => scrollToElement()} className={cn(`text-green-500 bg-transparent text-xl border-b-1 mx-1 mb-2 border-b border-green-500 hover:text-black hover:border-black`)}>{t("subscribeForUpdates")}</button>            
                 </div>
                 <div className="flex flex-row flex-wrap gap-4 lg:hidden w-full ">
                     <select id="categories-dropdown" value={selectedCategory || ""} onChange={onSelectChange} className="bg-transparent text-xl border-green-500 hover:bg-gray-500 rounded-md border-2 px-3 py-2 text-green-500">
-                    <option value="">View all</option>
+                    <option value="">{t("viewAll")}</option>
                         {data.map((item) => (
                             <option value={item.key} key={item.key}>{item.name}</option>
                         ))}
                     </select>
                     <button 
-                    onClick={() => scrollToElement()} className={cn(`text-green-500 bg-transparent text-xl border-b-1 mx-1 mb-2 border-b border-green-500 mt-2 hover:text-black hover:border-black`)}>Subscribe for updates</button>            
+                    onClick={() => scrollToElement()} className={cn(`text-green-500 bg-transparent text-xl border-b-1 mx-1 mb-2 border-b border-green-500 mt-2 hover:text-black hover:border-black`)}>{t("subscribeForUpdates")}</button>
                 </div>
             </div>
     )
