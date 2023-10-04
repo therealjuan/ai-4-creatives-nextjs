@@ -32,7 +32,7 @@ export const Header = ({ follow, subscribe, contact, submit }: HeaderProps) => {
         <div className="px-8 py-10">
             <div className="flex flex-wrap justify-between items-center">
                 <div className="flex items-center">
-                    <Link href="/" className='w-[70vw] max-w-[32rem]'>
+                    <Link href="/" className='w-[70vw] max-w-[26rem]'>
                         <Image src={logoAIforCreatives} className="w-full" alt="AI for Creatives"></Image>
                     </Link>
                 </div>
