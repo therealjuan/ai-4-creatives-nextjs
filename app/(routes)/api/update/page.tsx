@@ -6,7 +6,7 @@ import { Tool, Category, HomepageCard, PickedTool } from '@prisma/client';
 // Function to fetch data from Google Sheets
 async function fetchGoogleSheetData(rangeSheet: string) {
 
-  const { privateKey } = JSON.parse(process.env.GOOGLE_PRIVATE_KEY || '{privateKey: null} ');
+  // const { privateKey } = JSON.parse(process.env.GOOGLE_PRIVATE_KEY || '{privateKey: null} ');
 
   // const auth = new google.auth.GoogleAuth({
   //     scopes: ['https://www.googleapis.com/auth/spreadsheets.readonly'],
@@ -24,7 +24,7 @@ async function fetchGoogleSheetData(rangeSheet: string) {
   //   range: rangeSheet
   // });
   // return response.data.values;
-  return privateKey;
+  return null;
 }
 
 function transformString(str: string) {
