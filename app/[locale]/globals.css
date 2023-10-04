@@ -249,4 +249,6 @@ h1, h2, h3, .Typewriter__cursor {
   filter: grayscale(0) brightness(1);
 }
 
-
+.draggable {
+  cursor: grab;
+}
