@@ -40,6 +40,15 @@ export default function RootLayout({
       <html lang={locale}>
         <head>
             <Script id="cookieyes" src="https://cdn-cookieyes.com/client_data/09333a7ba76cff02fefce3ab/script.js" />
+            <Script src="/feedbackFin.js" />
+            <script dangerouslySetInnerHTML={{ __html: `
+            window.feedbackfin = { config: {}, ...window.feedbackfin };
+          
+            window.feedbackfin.config.url = "https://rowy-hooks-xt7wiizbna-ey.a.run.app/wh/Feeedback/p09wb8H8Ppz1FeOKpBhf";
+            window.feedbackfin.config.user = {
+                name: "...",
+                email: "...",
+            };` }} />
             <link rel="icon" href="/favicon.ico" sizes="any" />
             <link
               rel="apple-touch-icon"

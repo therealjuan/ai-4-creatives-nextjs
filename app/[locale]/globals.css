@@ -252,3 +252,24 @@ h1, h2, h3, .Typewriter__cursor {
 .draggable {
   cursor: grab;
 }
+
+#feedback-button {
+    position: fixed;
+    z-index: 9999;
+    padding: 1rem;
+    width: 4rem;
+    height: 4rem;
+    top: 50%;
+    margin-top: -1rem;
+    overflow: hidden;
+    background: #111419;
+    cursor: pointer;
+    border-radius: 50%;
+    right: 1rem;
+}
+
+#feedback-button img {
+    filter: brightness(1) invert(1);
+    position: relative;
+    right: 0.1rem;
+}
