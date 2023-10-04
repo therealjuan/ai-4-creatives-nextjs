@@ -86,7 +86,7 @@ export const NewsletterForm = ({ stay, toolbox, join, placeholder, subscribe, th
                             type="email"
                             onChange={() => setSubscribed(false)}
                             placeholder={placeholder}
-                            className='bg-white text-xl box-border pb-[.6rem] h-auto rounded-none w-full' 
+                            className='bg-white text-xl box-border pb-[.6rem] h-auto rounded-none max-w-[30rem]' 
                             id="email" 
                         /> 
                         <Button size="sm" disabled={isSubmitting} className='bg-black text-xl p-6 rounded-none hover:bg-green-500 hover:text-black'>{subscribe}</Button>

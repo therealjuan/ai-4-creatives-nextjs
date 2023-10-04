@@ -54,7 +54,7 @@ const TermsPage = () => {
                     <p className="mb-6"><div dangerouslySetInnerHTML={{__html: t.raw('p10')}} ></div></p>
                     </li>
                     <li>
-                    <p className="mb-6"><div dangerouslySetInnerHTML={{__html: t.raw('p11')}} ></div><a className="border-b-2 border-black hover:border-green-500 hover:text-green-500" href="https://aiforcreativ.es" rel="external nofollow noopener" target="_blank">https://aiforcreativ.es</a></p>
+                    <p className="mb-6"><strong>{t("p11")}</strong>{t("p11b")}<a className="border-b-2 border-black hover:border-green-500 hover:text-green-500" href="https://aiforcreativ.es" rel="external nofollow noopener" target="_blank">https://aiforcreativ.es</a></p>
                     </li>
                     <li>
                     <p className="mb-6"><div dangerouslySetInnerHTML={{__html: t.raw('p12')}} ></div></p>

@@ -3,12 +3,11 @@ import type { Metadata } from 'next'
 import { Header } from '../components/header'
 import { Footer } from '../components/footer'
 import { GradientBackground } from "../components/gradientBackground";
-import { ONUTSticker } from "../components/onutSticker";
-import { ToolSticker } from "../components/toolSticker";
+import { Stickers } from "../components/stickers";
 import { NewsletterForm } from '../components/newsletterForm';
 import { ONUT } from '../components/ONUT';
-import { VideoCircleSticker } from "../components/videoCircleSticker";
 import Script from 'next/script'
+import { Scripts } from '../components/scripts'
 import {notFound} from 'next/navigation';
 import { useTranslations, useMessages } from 'next-intl';
 import {NextIntlClientProvider} from 'next-intl';
@@ -41,18 +40,23 @@ export default function RootLayout({
       <html lang={locale}>
         <head>
             <Script id="cookieyes" src="https://cdn-cookieyes.com/client_data/09333a7ba76cff02fefce3ab/script.js" />
+            <link rel="icon" href="/favicon.ico" sizes="any" />
+            <link
+              rel="apple-touch-icon"
+              href="/apple-icon?<generated>"
+              type="image/<generated>"
+              sizes="<generated>"
+            />
         </head>
         <body>
-          <GradientBackground />
-          <ToolSticker />
-          <ONUTSticker />
-          <VideoCircleSticker />
-          <Header follow={t("header.follow")} contact={t("header.contact")} submit={t("header.submit")} subscribe={t("header.subscribe")} />
-          <div className='pt-10 pb-8 mx-auto flex flex-col'>
             <NextIntlClientProvider locale={locale} messages={messages}>
-                {children}
-            </NextIntlClientProvider>
-          </div>
+              <GradientBackground />
+              <Stickers />
+            <Header follow={t("header.follow")} contact={t("header.contact")} submit={t("header.submit")} subscribe={t("header.subscribe")} />
+            <div className='pt-10 pb-8 mx-auto flex flex-col'>
+                  {children}
+            </div>
+          </NextIntlClientProvider>
           <div className="grid grid-cols-2 px-8 pt-8 pb-20 gap-8">
             <NewsletterForm 
               stay={t("newsletter.stay")} 
@@ -71,6 +75,7 @@ export default function RootLayout({
               mission={t("onut.mission")} />
           </div>
           <Footer />
+          <Scripts />
         </body>
       </html>
   )

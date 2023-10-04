@@ -1,10 +1,12 @@
 "use client";
 
 import { useEffect, useState } from 'react';
+import {useTranslations} from 'next-intl';
 
 const PrivacyPage = () => {
 
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+    const t = useTranslations('Privacy');
 
     useEffect(() => {
         const handleMouseMove = (event: MouseEvent) => {
@@ -19,36 +21,36 @@ const PrivacyPage = () => {
 
     return ( 
         <div className="px-8">
-            <h1 className="mb-8 font-black tracking-tight leading-tight pb-6 text-8xl dark:text-white w-full" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px` }}>Privacy Policy</h1>
+            <h1 className="mb-8 font-black tracking-tight leading-tight pb-6 text-8xl dark:text-white w-full" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px` }}>{t("headline")}</h1>
             <div className="grid grid-cols-8 mb-0">
                 <div className="col-span-5 text-xl leading-8">
-                    <p className="mb-6">At AI for Creatives, accessible from https://aiforcreativ.es, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by AI for Creatives and how we use it.</p>
-                    <p className="mb-6">If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us. Our Privacy Policy was created with the help of the <a className="border-b-2 border-black hover:border-green-500 hover:text-green-500" href="https://www.termsfeed.com/privacy-policy-generator/">Privacy Policy Generator</a>.</p>
-                    <h2 className="font-black text-4xl leading-tight mb-6" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`}}>Log Files</h2>
-                    <p className="mb-8">AI for Creatives follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services&apos; analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users&apos; movement on the website, and gathering demographic information.</p>
-                    <h2 className="font-black text-4xl leading-tight mb-6" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`}}>Cookies and Web Beacons</h2>
-                    <p className="mb-8">Like any other website, AI for Creatives uses &quot;cookies&quot;. These cookies are used to store information including visitors&apos; preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users&apos; experience by customizing our web page content based on visitors&apos; browser type and/or other information.</p>
-                    <h2 className="font-black text-4xl leading-tight mb-6" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`}}>Google DoubleClick DART Cookie</h2>
-                    <p className="mb-8">Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to www.website.com and other sites on the internet. However, visitors may choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy at the following URL – <a className="border-b-2 border-black hover:border-green-500 hover:text-green-500" href="https://www.termsfeed.com/privacy-policy-generator/">https://policies.google.com/technologies/ads</a></p>
-                    <h2 className="font-black text-4xl leading-tight mb-6" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`}}>Our Advertising Partners</h2>
-                    <p className="mb-8">Some of advertisers on our site may use cookies and web beacons. Our advertising partners are listed below. Each of our advertising partners has their own Privacy Policy for their policies on user data. For easier access, we hyperlinked to their Privacy Policies below.</p>
+                    <p className="mb-6">{t("p1a")} https://aiforcreativ.es, {t("pb")}</p>
+                    <p className="mb-6">{t("p2")}<a className="border-b-2 border-black hover:border-green-500 hover:text-green-500" href="https://www.termsfeed.com/privacy-policy-generator/">Privacy Policy Generator</a>.</p>
+                    <h2 className="font-black text-4xl leading-tight mb-6" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`}}>{t("h2-1")}</h2>
+                    <p className="mb-8">{t("p3")}</p>
+                    <h2 className="font-black text-4xl leading-tight mb-6" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`}}>{t("h2-2")}</h2>
+                    <p className="mb-8">{t("p4")}</p>
+                    <h2 className="font-black text-4xl leading-tight mb-6" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`}}>{t("h2-3")}</h2>
+                    <p className="mb-8">{t("p5")}<a className="border-b-2 border-black hover:border-green-500 hover:text-green-500" href="https://www.termsfeed.com/privacy-policy-generator/">https://policies.google.com/technologies/ads</a></p>
+                    <h2 className="font-black text-4xl leading-tight mb-6" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`}}>{t("h2-4")}</h2>
+                    <p className="mb-8">{t("p6")}</p>
                     <ul className='list-disc ml-10'>
                         <li><p className="mb-6">Google - <a className="border-b-2 border-black hover:border-green-500 hover:text-green-500" href="https://www.termsfeed.com/privacy-policy-generator/">https://policies.google.com/technologies/ads</a>.</p></li>
                     </ul>
-                    <h2 className="font-black text-4xl leading-tight mb-6" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`}}>Privacy Policies</h2>
-                    <p className="mb-6">You may consult this list to find the Privacy Policy for each of the advertising partners of AI for Creatives.</p>
-                    <p className="mb-6">Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on AI for Creatives, which are sent directly to users&apos; browser. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on websites that you visit.</p>
-                    <p className="mb-8">Note that AI for Creatives has no access to or control over these cookies that are used by third-party advertisers.</p>
-                    <h2 className="font-black text-4xl leading-tight mb-6" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`}}>Third Party Privacy Policies</h2>
-                    <p className="mb-6">AI for Creatives&apos;s Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options.</p>
-                    <p className="mb-8">You can choose to disable cookies through your individual browser options. To know more detailed information about cookie management with specific web browsers, it can be found at the browsers&apos; respective websites. What Are Cookies?</p>
-                    <h2 className="font-black text-4xl leading-tight mb-6" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`}}>Children&apos;s Information</h2>
-                    <p className="mb-6">Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.</p>
-                    <p className="mb-8">AI for Creatives does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.</p>
-                    <h2 className="font-black text-4xl leading-tight mb-6" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`}}>Online Privacy Policy Only</h2>
-                    <p className="mb-8">This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in AI for Creatives. This policy is not applicable to any information collected offline or via channels other than this website.</p>
-                    <h2 className="font-black text-4xl leading-tight mb-6" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`}}>Consent</h2>
-                    <p className="mb-8">By using our website, you hereby consent to our Privacy Policy and agree to its Terms and Conditions.</p>
+                    <h2 className="font-black text-4xl leading-tight mb-6" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`}}>{t("h2-5")}</h2>
+                    <p className="mb-6">{t("p7")}</p>
+                    <p className="mb-6">{t("p8")}</p>
+                    <p className="mb-8">{t("p9")}</p>
+                    <h2 className="font-black text-4xl leading-tight mb-6" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`}}>{t("h2-6")}</h2>
+                    <p className="mb-6">{t("p10")}</p>
+                    <p className="mb-8">{t("p11")}</p>
+                    <h2 className="font-black text-4xl leading-tight mb-6" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`}}>{t("h2-7")}</h2>
+                    <p className="mb-6">{t("p12")}</p>
+                    <p className="mb-8">{t("p13")}</p>
+                    <h2 className="font-black text-4xl leading-tight mb-6" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`}}>{t("h2-8")}</h2>
+                    <p className="mb-8">{t("p14")}</p>
+                    <h2 className="font-black text-4xl leading-tight mb-6" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`}}>{t("h2-9")}</h2>
+                    <p className="mb-8">{t("p15")}</p>
                 </div>
             </div>
         </div>
