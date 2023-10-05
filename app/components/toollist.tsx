@@ -11,6 +11,7 @@ import {
   } from "@/components/ui/table"
 
 import { Button } from "@/components/ui/button";
+import { useRouter } from 'next-intl/client';
 
 import GetCategoryFromURL from "./getCategoryFromURL";
 import transformToString from "./transformToString";
@@ -22,6 +23,7 @@ import { ToolCounter } from "./toolcounter";
 
 interface ToolListProps {
     data: CategoryType[];
+    locale: string
 }
 
 interface CategoryType {
@@ -57,7 +59,8 @@ const toBase64 = (str: string) =>
     : window.btoa(str)
 
 export const ToolList = ({
-    data
+    data,
+    locale
 }: ToolListProps) => {
 
     const defaultItems = 20;
@@ -80,7 +83,7 @@ export const ToolList = ({
     return (
         <div>
             <div className="flex flex-row flex-wrap px-8">
-                <ToolCounter total={filteredData.length} selectedCategory={filteredData[0].categoryName} />
+                <ToolCounter total={filteredData.length} selectedCategory={filteredData[0].categoryName} /> 
             </div>
             {displayedData.map((item, index) => (
             <div className={`gap-2 py-3 transition-all ${index < displayedData.length - 1 ? 'border-b-[1px] border-gray-500' : ''}`} key={item.id}>
@@ -102,7 +105,8 @@ export const ToolList = ({
                         </a>
                     </div>
                     <div className="lg:w-1/2 flex-1 text-xl">
-                        <p className='mb-4'>{item.description}</p>
+                        { locale === 'en' && ( <p className='mb-4'>{item.description}</p>)}
+                        { locale === 'es' && ( <p className='mb-4'>{item.descriptionEs}</p>)}
                         <p className='mb-4'>First seen on: <a href={item.sourceLink} className='border-b-[1.5px] border-black hover:text-green-500 hover:border-green-500' target="_blank">{item.source}</a></p>
                     </div>
                     <div className="relative flex flex-col min-w-[20vw] items-baseline w-1/12">

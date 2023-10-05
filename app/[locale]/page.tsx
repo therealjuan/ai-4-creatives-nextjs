@@ -6,7 +6,7 @@ import { Categories } from "../components/categories"
 import { ToolList } from '../components/toollist'
 import { BlinkSticker } from "../components/blinkSticker";
 
-const Home = async () => {
+const Home = async ({ params }: { params: { locale: string; }}) => {
 
   const categories = await prismadb.category.findMany();
   const cards = await prismadb.homepageCard.findFirst();
@@ -24,7 +24,7 @@ const Home = async () => {
         </div>
       </div>
       <Categories data={categories}></Categories>
-      <ToolList data={tools}></ToolList>
+      <ToolList data={tools} locale={params.locale}></ToolList>
     </main>
   )
 }
