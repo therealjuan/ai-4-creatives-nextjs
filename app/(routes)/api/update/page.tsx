@@ -98,9 +98,9 @@ async function uploadToolsData(dataTools: DataTool[]) {
       
       console.log(toolData);
       if (existingTool.length === 0) {
-        await prismadb.tool.create({
-          data: toolData
-        });
+        // await prismadb.tool.create({
+        //   data: toolData
+        // });
       } else {
         await prismadb.tool.update({
           where: { id: transformString(item["name"]) },
@@ -118,11 +118,15 @@ async function uploadToolsDataTranslation(dataTools: DataTool[]) {
     delete item.descriptionEs;
     
     const keys = Object.keys(item) as (keyof DataTool)[];
-  
+    
+    let existingCategory;
+
     const categoryName = item[keys[3]];
-    const existingCategory = await prismadb.category.findMany({
-      where: { key: transformString(categoryName) }
-    });
+    if (typeof categoryName === "string") {
+      existingCategory = await prismadb.category.findMany({
+        where: { key: transformString(categoryName) }
+      });
+    }
 
     const toolName = item[keys[1]] as string;
     const existingTool = await prismadb.tool.findMany({
@@ -134,9 +138,9 @@ async function uploadToolsDataTranslation(dataTools: DataTool[]) {
       parent:         (item[keys[0]]) ? item[keys[0]] : '',
       id:             transformString(toolName),
       name:           toolName, 
-      link:           item[keys[2]],
-      description:    item[keys[4]],
-      descriptionEs:  item[keys[5]],
+      link:           (item[keys[2]]) ? item[keys[2]] : '',
+      description:    (item[keys[4]]) ? item[keys[4]] : '',
+      descriptionEs:  (item[keys[5]]) ? item[keys[5]] : '',
       source:         (item[keys[7]]) ? item[keys[7]] : '',
       sourceLink:     (item[keys[8]]) ? item[keys[8]] : '',
       image:          '',
@@ -144,30 +148,30 @@ async function uploadToolsDataTranslation(dataTools: DataTool[]) {
       categoryId:     ''
     }
 
-    if (existingCategory.length === 0) {
-      console.log(1);
-      const createNewCategory = await prismadb.category.create({
-        data: {
-          name: categoryName, 
-          key: transformString(categoryName)
-        }
-      });
+    // if (existingCategory.length === 0) {
+    //   console.log(1);
+    //   const createNewCategory = await prismadb.category.create({
+    //     data: {
+    //       name: categoryName, 
+    //       key: transformString(categoryName)
+    //     }
+    //   });
 
-      toolData.categoryId = createNewCategory.id;
-      toolData.categoryName = categoryName;
+    //   toolData.categoryId = createNewCategory.id;
+    //   toolData.categoryName = categoryName;
 
-    } else {
-      toolData.categoryId = existingCategory[0]["id"];
-      toolData.categoryName = existingCategory[0]["name"];
+    // } else {
+    //   toolData.categoryId = existingCategory[0]["id"];
+    //   toolData.categoryName = existingCategory[0]["name"];
  
-      console.log(toolData);
-    }
+    //   console.log(toolData);
+    // }
       
       console.log(toolData);
       if (existingTool.length === 0) {
-        await prismadb.tool.create({
-          data: toolData
-        });
+        // await prismadb.tool.create({
+        //   data: toolData
+        // });
       } else {
         await prismadb.tool.update({
           where: { id: transformString(toolName) },
@@ -241,7 +245,7 @@ export default async function Page() {
   // uploadPickedTool(dataPick);
   // uploadCardsData(dataTweets);
   // uploadToolsData(dataTools);
-  uploadToolsDataTranslation(dataTools);
+  // uploadToolsDataTranslation(dataTools);
   
   return (
     <div>

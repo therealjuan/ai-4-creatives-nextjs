@@ -13,7 +13,6 @@ import { Scripts } from '../components/scripts'
 import {notFound} from 'next/navigation';
 import { useTranslations, useMessages } from 'next-intl';
 import {NextIntlClientProvider} from 'next-intl';
-import { RevealOnScroll } from '../components/revealOnScroll';
 
 const locales = ['en', 'es'];
 
