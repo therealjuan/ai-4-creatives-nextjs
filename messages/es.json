@@ -3,13 +3,13 @@
         "metadata": "Fast-track your creativity with this catalog curated by humans. Updated daily. We're stoked for the future of creativity: being original and making new worlds. Change is good, level up!",
         "followUs": "@Follow us",
         "toolSticker": {
-            "lastToolAdded": "Last tool added"
+            "lastToolAdded": "Ultima tool añadida"
         },
         "header": {
-            "follow": "@Follow us",
-            "contact": "Contact",
-            "submit": "Submit tool",
-            "subscribe": "Subscribe"
+            "follow": "@Siguenos",
+            "contact": "Contacto",
+            "submit": "Sugiere",
+            "subscribe": "Subscribete"
         },
         "categories": {
             "viewAll": "View All",

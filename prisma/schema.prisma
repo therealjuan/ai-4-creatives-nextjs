@@ -24,8 +24,8 @@ model Tool {
   sourceLink    String @db.LongText
   link          String @db.LongText
   parent        String 
-  description   String @db.Text
-  descriptionEs String?
+  description   String  @db.Text
+  descriptionEs String? @db.LongText
 
   createdAt     DateTime @default(now())
   updatedAt     DateTime @updatedAt

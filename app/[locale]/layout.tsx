@@ -55,7 +55,7 @@ export default function RootLayout({
             <NextIntlClientProvider locale={locale} messages={messages}>
               <GradientBackground />
               <Stickers />
-            <Header follow={t("header.follow")} contact={t("header.contact")} submit={t("header.submit")} subscribe={t("header.subscribe")} />
+            <Header follow={t("header.follow")} contact={t("header.contact")} submit={t("header.submit")} subscribe={t("header.subscribe")} locale={locale} />
             <div className='pt-10 pb-8 mx-auto flex flex-col'>
                   {children}
             </div>

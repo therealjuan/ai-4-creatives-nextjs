@@ -6,25 +6,23 @@ import { Tool, Category, HomepageCard, PickedTool } from '@prisma/client';
 // Function to fetch data from Google Sheets
 async function fetchGoogleSheetData(rangeSheet: string) {
 
-  const { privateKey } = JSON.parse(process.env.GOOGLE_PRIVATE_KEY || '{privateKey: null} ');
+  const target = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
 
-  const auth = new google.auth.GoogleAuth({
-      scopes: ['https://www.googleapis.com/auth/spreadsheets.readonly'],
-      projectId: process.env.GOOGLE_PROJECT_ID,
-      credentials: {
-        private_key: privateKey,
-        client_email: process.env.GOOGLE_CLIENT_EMAIL
-      }
-  });
-  const authToken = auth.getClient();
-  
-  const sheets = google.sheets({ version: 'v4', authToken });
-  const response = await sheets.spreadsheets.values.get({
-    spreadsheetId: process.env.SHEET_ID,
-    range: rangeSheet
-  });
+  const jwt = new google.auth.JWT(
+    process.env.GOOGLE_CLIENT_EMAIL,
+    undefined,
+    (process.env.GOOGLE_PRIVATE_KEY || '').replace(/\\n/g, '\n'),
+    target
+  );
+
+    const sheets = google.sheets({ version: 'v4', auth: jwt });
+    
+    const response = await sheets.spreadsheets.values.get({
+      spreadsheetId: process.env.SHEET_ID,
+      range: rangeSheet
+    });
+
   return response.data.values;
-  return privateKey;
 }
 
 function transformString(str: string) {
@@ -46,7 +44,7 @@ interface DataTool {
       parent:         string,
       description:    string,
       esRevisado:     string,
-      descriptionEs:  string,
+      descriptionEs?: string,
       source:         string,
       sourceLink:     string,
       image:          string,
@@ -113,69 +111,70 @@ async function uploadToolsData(dataTools: DataTool[]) {
 }
 
 async function uploadToolsDataTranslation(dataTools: DataTool[]) {
-  // let item = dataTools[0];
 
-  // console.log(item["name"]);
-  // console.log(transformString(item[1]));
+  // console.log(dataTools);
 
-  // for (const item of dataTools2) { 
+  for (const item of dataTools) { 
+    delete item.descriptionEs;
     
-    // const categoryName = item["category"];
-    // const existingCategory = await prismadb.category.findMany({
-    //   where: { key: transformString(categoryName) }
-    // });
+    const keys = Object.keys(item) as (keyof DataTool)[];
+  
+    const categoryName = item[keys[3]];
+    const existingCategory = await prismadb.category.findMany({
+      where: { key: transformString(categoryName) }
+    });
 
-    // console.log(existingCategory);
-    // const existingTool = await prismadb.tool.findMany({
-    //   where: { id: transformString(item[1]) }
-    // });
+    const toolName = item[keys[1]] as string;
+    const existingTool = await prismadb.tool.findMany({
+      where: { id: transformString(toolName) }
+    });
 
-    // console.log(existingTool);
-    // let toolData = {
-    //   id:             transformString(item["id"]),
-    //   name:           item["name"], 
-    //   link:           item["link"],
-    //   parent:         (item["parent"]) ? item["parent"] : '',
-    //   description:    item["description"],
-    //   esRevisado:     item["esRevisado"],
-    //   source:         (item["source"]) ? item["source"] : '',
-    //   sourceLink:     (item["sourceLink"]) ? item["sourceLink"] : '',
-    //   image:          '',
-    //   categoryName:   '',
-    //   categoryId:     ''
-    // }
+    console.log(existingTool);
+    let toolData = {
+      parent:         (item[keys[0]]) ? item[keys[0]] : '',
+      id:             transformString(toolName),
+      name:           toolName, 
+      link:           item[keys[2]],
+      description:    item[keys[4]],
+      descriptionEs:  item[keys[5]],
+      source:         (item[keys[7]]) ? item[keys[7]] : '',
+      sourceLink:     (item[keys[8]]) ? item[keys[8]] : '',
+      image:          '',
+      categoryName:   '',
+      categoryId:     ''
+    }
 
-    // if (existingCategory.length === 0) {
-    //   console.log(1);
-    //   const createNewCategory = await prismadb.category.create({
-    //     data: {
-    //       name: categoryName, 
-    //       key: transformString(categoryName)
-    //     }
-    //   });
+    if (existingCategory.length === 0) {
+      console.log(1);
+      const createNewCategory = await prismadb.category.create({
+        data: {
+          name: categoryName, 
+          key: transformString(categoryName)
+        }
+      });
 
-    //   toolData.categoryId = createNewCategory.id;
-    //   toolData.categoryName = categoryName;
+      toolData.categoryId = createNewCategory.id;
+      toolData.categoryName = categoryName;
 
-    // } else {
-    //   toolData.categoryId = existingCategory[0]["id"];
-    //   toolData.categoryName = existingCategory[0]["name"];
-
-    //   console.log(toolData);
-    // }
+    } else {
+      toolData.categoryId = existingCategory[0]["id"];
+      toolData.categoryName = existingCategory[0]["name"];
+ 
+      console.log(toolData);
+    }
       
-    //   console.log(toolData);
-    //   if (existingTool.length === 0) {
-    //     await prismadb.tool.create({
-    //       data: toolData
-    //     });
-    //   } else {
-    //     await prismadb.tool.update({
-    //       where: { id: transformString(item["name"]) },
-    //       data: toolData
-    //     });
-    //   } 
-    // }
+      console.log(toolData);
+      if (existingTool.length === 0) {
+        await prismadb.tool.create({
+          data: toolData
+        });
+      } else {
+        await prismadb.tool.update({
+          where: { id: transformString(toolName) },
+          data: toolData
+        });
+      } 
+    }
 }
 
 interface PickedData {
@@ -236,13 +235,14 @@ async function uploadCardsData(dataTweets: TweetData[]) {
 export default async function Page() {
 
   const dataTweets = await fetchGoogleSheetData(`'#TweetWeb'!A2:F`);
-  const dataTools = await fetchGoogleSheetData(`'#GlossaryAI'!A2:H`);
+  const dataTools = await fetchGoogleSheetData(`'#GlossaryAI'!A2:I`);
   const dataPick = await fetchGoogleSheetData(`'#PickWeb'!A2:D`);
 
   // uploadPickedTool(dataPick);
   // uploadCardsData(dataTweets);
   // uploadToolsData(dataTools);
   uploadToolsDataTranslation(dataTools);
+  
   return (
     <div>
       {/* {dataTools && dataTools.map((item, index) => (

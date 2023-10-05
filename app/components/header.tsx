@@ -4,8 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image'
 import logoAIforCreatives from '/public/ai-for-creatives-logo.svg'
 import { HamburgerMenuIcon, Cross1Icon } from '@radix-ui/react-icons'
-
-import Link from "next/link";
+import Link from 'next-intl/link';
 import { Button } from "@/components/ui/button";
 
 interface HeaderProps {
@@ -13,9 +12,10 @@ interface HeaderProps {
     subscribe: string;
     contact: string;
     submit: string;
+    locale: string;
   }  
 
-export const Header = ({ follow, subscribe, contact, submit }: HeaderProps) => {
+export const Header = ({ follow, subscribe, contact, submit, locale }: HeaderProps) => {
         const [isMenuOpen, setIsMenuOpen] = useState(false);
 
         // Function to handle scrolling to a specific element
@@ -60,6 +60,8 @@ export const Header = ({ follow, subscribe, contact, submit }: HeaderProps) => {
                     <li className="py-3"><Link className="hover:text-green-500" href="https://twitter.com/ai_forcreatives" target="_blank">{follow}</Link></li>
                     <li className="py-3"><Link className="hover:text-green-500" href="mailto:hello@aiforcreativ.es">{contact}</Link></li>
                     <li className="py-3"><Link className="hover:text-green-500" href="/submit">{submit}</Link></li>
+                    { locale == 'en' && ( <li className="py-3"><Link className="hover:text-green-500" href="/" locale="es">ES</Link></li> ) }
+                    { locale == 'es' && ( <li className="py-3"><Link className="hover:text-green-500" href="/" locale="en">EN</Link></li> ) }
                     <li className="py-3"><Button size="lg" onClick={() => scrollToElement()} className='text-xl px-4 py-6 rounded-none bg-black max-lg:p-0 max-lg:h-auto hover:bg-green-500 hover:text-black'>{subscribe}</Button></li>
                 </ul>
             </div>
