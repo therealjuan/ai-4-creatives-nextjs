@@ -6,11 +6,14 @@ import { GradientBackground } from "../components/gradientBackground";
 import { Stickers } from "../components/stickers";
 import { NewsletterForm } from '../components/newsletterForm';
 import { ONUT } from '../components/ONUT';
+import Image from 'next/image';
+import arrowImg from "/public/dropdown-arrow.svg"
 import Script from 'next/script'
 import { Scripts } from '../components/scripts'
 import {notFound} from 'next/navigation';
 import { useTranslations, useMessages } from 'next-intl';
 import {NextIntlClientProvider} from 'next-intl';
+import { RevealOnScroll } from '../components/revealOnScroll';
 
 const locales = ['en', 'es'];
 
@@ -37,18 +40,9 @@ export default function RootLayout({
   const messages = useMessages();
 
   return (
-      <html lang={locale}>
+      <html lang={locale} className='scroll-smooth'>
         <head>
             <Script id="cookieyes" src="https://cdn-cookieyes.com/client_data/09333a7ba76cff02fefce3ab/script.js" />
-            <Script src="/feedbackFin.js" />
-            <script dangerouslySetInnerHTML={{ __html: `
-            window.feedbackfin = { config: {}, ...window.feedbackfin };
-          
-            window.feedbackfin.config.url = "https://rowy-hooks-xt7wiizbna-ey.a.run.app/wh/Feeedback/p09wb8H8Ppz1FeOKpBhf";
-            window.feedbackfin.config.user = {
-                name: "...",
-                email: "...",
-            };` }} />
             <link rel="icon" href="/favicon.ico" sizes="any" />
             <link
               rel="apple-touch-icon"
@@ -84,6 +78,9 @@ export default function RootLayout({
               mission={t("onut.mission")} />
           </div>
           <Footer />
+            <a href="#top" className="w-8 h-8 fixed bottom-8 right-4 float-right mr-8 transition-all duration-500">
+              <Image alt="Scroll to top" src={arrowImg} className='rotate-180'></Image>
+            </a>
           <Scripts />
         </body>
       </html>

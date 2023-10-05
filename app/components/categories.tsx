@@ -6,6 +6,8 @@ import { cn } from "@/lib/utils";
 import transformToString from "./transformToString";
 import { useRouter, useSearchParams } from "next/navigation";
 import {useTranslations} from 'next-intl';
+import Image from 'next/image';
+import arrowImg from "/public/dropdown-arrow.svg"
 
 interface CategoriesProps {
     data: Category[];
@@ -90,6 +92,7 @@ export const Categories = ({
                 ))}
                                 <button 
                     onClick={() => scrollToElement()} className={cn(`text-green-500 bg-transparent text-xl border-b-1 mx-1 mb-2 border-b border-green-500 hover:text-black hover:border-black`)}>{t("subscribeForUpdates")}</button>            
+                    <a href="#newsletter" className="w-8 h-8 relative float-right mr-4"><Image alt="Scroll to bottom" src={arrowImg} ></Image></a>
                 </div>
                 <div className="flex flex-row flex-wrap gap-4 lg:hidden w-full ">
                     <select id="categories-dropdown" value={selectedCategory || ""} onChange={onSelectChange} className="bg-transparent text-xl border-green-500 hover:bg-gray-500 rounded-md border-2 px-3 py-2 text-green-500">

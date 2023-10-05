@@ -12,7 +12,14 @@ export const Scripts = () => {
             <div dangerouslySetInnerHTML={{ __html: `
               <button data-feedbackfin-button id="feedback-button"><image class="feedback-icon" src="/feedback-icon.svg" alt="Give us feedback"></button>
             `}}></div>
+            <script dangerouslySetInnerHTML={{ __html: `
+            window.feedbackfin = { config: {}, ...window.feedbackfin };
+          
+            window.feedbackfin.config.url = "";
+            window.feedbackfin.config.user = {
+                name: "...",
+                email: "...",
+            };` }} />
         </div>
     )
 }
-

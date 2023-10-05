@@ -92,15 +92,14 @@ export const ToolList = ({
                         </a>
                     </div>
                     <div className="lg:w-1/5 w-full relative cursor-pointer table-row-image">
-                        <a href={item.link} className='flex gap-2' target="_blank">
-                            <Image 
+                        <a href={item.link} className='flex gap-2 image-container' target="_blank">
+                            <Image
                                 src={`https://d3jk7oka2i5czj.cloudfront.net/images/${item.id}.png`} 
                                 alt={`${item.name}`} 
-                                width="390" 
-                                height="220" 
-                                style={{ width: 390, height: 220 }}
+                                objectFit="cover"
+                                fill
                                 placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
-                                className='w-full h-auto scale-100 lg:hover:scale-105'/>
+                                className='w-full h-auto scale-100 lg:hover:scale-105' />
                         </a>
                     </div>
                     <div className="lg:w-1/2 flex-1 text-xl">

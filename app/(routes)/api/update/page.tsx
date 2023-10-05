@@ -8,22 +8,22 @@ async function fetchGoogleSheetData(rangeSheet: string) {
 
   const { privateKey } = JSON.parse(process.env.GOOGLE_PRIVATE_KEY || '{privateKey: null} ');
 
-  // const auth = new google.auth.GoogleAuth({
-  //     scopes: ['https://www.googleapis.com/auth/spreadsheets.readonly'],
-  //     projectId: process.env.GOOGLE_PROJECT_ID,
-  //     credentials: {
-  //       private_key: privateKey,
-  //       client_email: process.env.GOOGLE_CLIENT_EMAIL
-  //     }
-  // });
-  // const authToken = auth.getClient();
+  const auth = new google.auth.GoogleAuth({
+      scopes: ['https://www.googleapis.com/auth/spreadsheets.readonly'],
+      projectId: process.env.GOOGLE_PROJECT_ID,
+      credentials: {
+        private_key: privateKey,
+        client_email: process.env.GOOGLE_CLIENT_EMAIL
+      }
+  });
+  const authToken = auth.getClient();
   
-  // const sheets = google.sheets({ version: 'v4', authToken });
-  // const response = await sheets.spreadsheets.values.get({
-  //   spreadsheetId: process.env.SHEET_ID,
-  //   range: rangeSheet
-  // });
-  // return response.data.values;
+  const sheets = google.sheets({ version: 'v4', authToken });
+  const response = await sheets.spreadsheets.values.get({
+    spreadsheetId: process.env.SHEET_ID,
+    range: rangeSheet
+  });
+  return response.data.values;
   return privateKey;
 }
 
