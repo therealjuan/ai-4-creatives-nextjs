@@ -36,6 +36,7 @@ interface CategoryType {
     link:           string;
     parent:         string;
     description:    string;
+    descriptionEs:  string;
     categoryId:     string;
 }
 
