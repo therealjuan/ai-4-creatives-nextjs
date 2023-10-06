@@ -23,6 +23,7 @@
     "clsx": "^2.0.0",
     "cors": "^2.8.5",
     "feedbackfin_react": "^2.0.0",
+    "framer-motion": "^10.16.4",
     "googleapis": "^126.0.1",
     "import-jquery": "^1.0.1",
     "jquery": "^3.7.1",

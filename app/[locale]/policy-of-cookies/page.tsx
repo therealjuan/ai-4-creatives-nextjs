@@ -33,7 +33,7 @@ const PolicyOfCookiesPage = () => {
             <div className="grid grid-cols-8 mb-0">
                 <div className="col-span-5 text-xl leading-8">
                     <p className="text-2xl mb-2">{t("lastUpdated-1")}</p>
-                    <p className="text-2xl mb-6">{t("lastUpdated-1")}</p>
+                    <p className="text-2xl mb-6">{t("lastUpdated-2")}</p>
                     <h2 className="font-black text-4xl leading-tight mb-6" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`}}>{t("h2-1")}</h2>
                     <p className="mb-6">{t("p1")}</p>
                     <p className="mb-6">{t("p2")}</p>

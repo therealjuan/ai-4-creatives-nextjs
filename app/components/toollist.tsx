@@ -108,7 +108,7 @@ export const ToolList = ({
                     <div className="lg:w-1/2 flex-1 text-xl">
                         { locale === 'en' && ( <p className='mb-4'>{item.description}</p>)}
                         { locale === 'es' && ( <p className='mb-4'>{item.descriptionEs}</p>)}
-                        <p className='mb-4'>First seen on: <a href={item.sourceLink} className='border-b-[1.5px] border-black hover:text-green-500 hover:border-green-500' target="_blank">{item.source}</a></p>
+                        <p className='mb-4'>{t('firstSeen')} <a href={item.sourceLink} className='border-b-[1.5px] border-black hover:text-green-500 hover:border-green-500' target="_blank">{item.source}</a></p>
                     </div>
                     <div className="relative flex flex-col min-w-[20vw] items-baseline w-1/12">
                         <button 

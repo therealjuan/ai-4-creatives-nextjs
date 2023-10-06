@@ -23,7 +23,8 @@
             "copyLink": "Copy link",
             "shareX": "Share in X",
             "shareLinkedin": "Share in Linkedin",
-            "shareLove": "Share Love"
+            "shareLove": "Share Love",
+            "firstSeen": "First seen on:"
         },
         "hero": {
             "dope": "Dope AI Catalog:",

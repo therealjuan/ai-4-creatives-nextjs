@@ -14,6 +14,7 @@ import {notFound} from 'next/navigation';
 import { useTranslations, useMessages } from 'next-intl';
 import {NextIntlClientProvider} from 'next-intl';
 
+
 const locales = ['en', 'es'];
 
 export const metadata: Metadata = {
