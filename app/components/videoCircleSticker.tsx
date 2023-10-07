@@ -21,7 +21,7 @@ export const VideoCircleSticker = () => {
     return (
         <div>
             <div className='draggable'>
-                <div className="absolute top-48 right-32 z-1 bg-white rounded-full w-72 border-white border-[6px] animate-[spin_40s_linear_infinite] max-lg:hidden">
+                <div className="absolute top-64 right-24 z-1 bg-white rounded-full w-72 border-white border-[6px] animate-[spin_40s_linear_infinite] max-lg:hidden">
                     <Image src={QuoteImg} alt="ONUT" className="w-full" />
                     <AdvancedVideo cldVid={medusaVideo} autoPlay playsInline loop muted className="absolute top-0 p-[1.3rem] rounded-full"/>
                 </div>

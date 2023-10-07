@@ -13,13 +13,21 @@ import { Scripts } from '../components/scripts'
 import {notFound} from 'next/navigation';
 import { useTranslations, useMessages } from 'next-intl';
 import {NextIntlClientProvider} from 'next-intl';
+import {createTranslator} from 'next-intl';
 
 
 const locales = ['en', 'es'];
 
-export const metadata: Metadata = {
-  title: "AI for Creatives",
-  description: "Fast-track your creativity with this catalog curated by humans. Updated daily. We're stoked for the future of creativity: being original and making new worlds. Change is good, level up!"
+export async function generateMetadata({ params: {locale}}: { params: { locale: string; }}):Promise<Metadata> {
+
+  const messages = (await import(`../../messages/${locale}.json`)).default;
+
+  const t = createTranslator({locale, messages});
+
+  return {
+    title: t("Index.title"),
+    description: t("Index.description")
+  }
 }
 
 export default function RootLayout({
@@ -36,6 +44,7 @@ export default function RootLayout({
   const isValidLocale = locales.some((cur) => cur === locale);
   if (!isValidLocale) notFound();
 
+  
   const t = useTranslations("Index");
   const messages = useMessages();
 
@@ -56,7 +65,7 @@ export default function RootLayout({
               <GradientBackground />
               <Stickers />
             <Header follow={t("header.follow")} contact={t("header.contact")} submit={t("header.submit")} subscribe={t("header.subscribe")} locale={locale} />
-            <div className='pt-10 pb-8 mx-auto flex flex-col'>
+            <div className='pt-8 pb-8 mx-auto flex flex-col'>
                   {children}
             </div>
           </NextIntlClientProvider>

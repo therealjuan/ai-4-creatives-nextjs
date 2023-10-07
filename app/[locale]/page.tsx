@@ -17,7 +17,7 @@ const Home = async ({ params }: { params: { locale: string; }}) => {
     <main className="flex flex-col items-center justify-between">
       <div className="px-8 w-full">
         <Hero numberOfTools={tools.length} />
-        <div className="grid grid-cols-5 gap-6 mt-6 mb-16 max-w-[1720px] max-[1300px]:grid-cols-2">
+        <div className="grid grid-cols-5 gap-6 mt-6 mb-8 max-w-[1720px] max-[1300px]:grid-cols-2">
             <HomeCard data={cards} callToAction="Source" cardType="Today in AI" />
             <HomeCard data={pickedTool} callToAction="Open" cardType="Today's tool" />
             <BlinkSticker />

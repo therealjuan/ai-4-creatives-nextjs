@@ -29,7 +29,7 @@ export const Header = ({ follow, subscribe, contact, submit, locale }: HeaderPro
             }
         };
     return (
-        <div className="px-8 py-10">
+        <div className="px-8 py-2">
             <div className="flex flex-wrap justify-between items-center">
                 <div className="flex items-center">
                     <Link href="/" className='w-[70vw] max-w-[26rem]'>
