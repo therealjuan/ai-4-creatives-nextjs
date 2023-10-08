@@ -18,8 +18,8 @@ const Home = async ({ params }: { params: { locale: string; }}) => {
       <div className="px-8 w-full">
         <Hero numberOfTools={tools.length} />
         <div className="grid grid-cols-5 gap-6 mt-6 mb-8 max-w-[1720px] max-[1300px]:grid-cols-2">
-            <HomeCard data={cards} callToAction="Source" cardType="Today in AI" />
-            <HomeCard data={pickedTool} callToAction="Open" cardType="Today's tool" />
+            <HomeCard data={cards} callToAction="source" cardType="todayInAI" locale={params.locale} />
+            <HomeCard data={pickedTool} callToAction="open" cardType="todayTool" locale={params.locale} />
             <BlinkSticker />
         </div>
       </div>

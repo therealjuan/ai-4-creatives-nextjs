@@ -19,12 +19,12 @@ model Category {
 model Tool {
   id            String @id @default(uuid())
   name          String @db.Text
-  source        String
-  image         String
+  source        String @db.LongText
+  image         String @db.LongText
   sourceLink    String @db.LongText
   link          String @db.LongText
   parent        String 
-  description   String  @db.Text
+  description   String  @db.LongText
   descriptionEs String? @db.LongText
 
   createdAt     DateTime @default(now())
@@ -41,20 +41,19 @@ model Tool {
 
 model HomepageCard {
   id            String @id @default(uuid())
-  description   String
-  descriptionEs String?
   source        String @db.LongText
-  image         String @db.LongText
   date          String
   time          String
-  callToAction  String
-  cardType      String
+  description   String
+  descriptionEs String?
+  image         String @db.LongText
 }
 
 model PickedTool {
   id            String @id @default(uuid())
   image         String
   description   String
+  descriptionEs String?
   source        String @db.LongText
-  date          String
+  date          String?
 }
