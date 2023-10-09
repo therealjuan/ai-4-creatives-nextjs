@@ -23,10 +23,10 @@ const SubmitToolPage = () => {
     return ( 
         <div className="px-8">
             <div className="grid grid-cols-8 gap-12 mb-0">
-                <div className="col-span-8 text-xl leading-8 lg:col-span-4">
-                    <h1 className="mb-0 font-black tracking-tight pb-4 text-8xl dark:text-white w-full leading-tight" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px` }}>{t("headline")}</h1>
-                    <p className="text-xl mb-2">{t.rich("p1")}</p>
-                    <p className="text-xl mb-20">{t.rich("p2")}</p>
+                <div className="col-span-8 text-xl lg:text-[1.6vh] leading-8 lg:col-span-4">
+                    <h1 className="mb-0 font-black tracking-tight pb-4 text-8xl lg:text-[12vh] dark:text-white w-full leading-tight" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px` }}>{t("headline")}</h1>
+                    <p className="text-xl lg:text-[1.6vh] mb-2">{t.rich("p1")}</p>
+                    <p className="text-xl lg:text-[1.6vh] mb-20">{t.rich("p2")}</p>
                     <h2 className="font-black text-4xl leading-tight mb-6" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`}}>{t("headline2")}</h2>
                     <p className="mb-6">{t("p3")}</p>
                     <h2 className="font-black text-4xl leading-tight mb-6" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`}}>{t("thank")}</h2>

@@ -105,7 +105,7 @@ export const ToolList = ({
                                 className='w-full h-auto scale-100 lg:hover:scale-105' />
                         </a>
                     </div>
-                    <div className="lg:w-1/2 flex-1 text-xl">
+                    <div className="lg:w-1/2 flex-1 text-xl lg:text-[1.6vh]">
                         { locale === 'en' && ( <p className='mb-4'>{item.description}</p>)}
                         { locale === 'es' && ( <p className='mb-4'>{item.descriptionEs}</p>)}
                         <p className='mb-4'>{t('firstSeen')} <a href={item.sourceLink} className='border-b-[1.5px] border-black hover:text-green-500 hover:border-green-500' target="_blank">{item.source}</a></p>
@@ -133,7 +133,7 @@ export const ToolList = ({
 
             {!showAll && filteredData.length > defaultItems && (
                 <div className="">
-                    <Button onClick={() => setShowAll(true)} className="w-full rounded-none bg-black hover:bg-green-500 hover:text-black text-xl p-8">
+                    <Button onClick={() => setShowAll(true)} className="w-full rounded-none bg-black hover:bg-green-500 hover:text-black text-xl lg:text-[1.6vh] p-8">
                         {t("showAllTools")}
                     </Button>
                 </div>

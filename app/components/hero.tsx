@@ -27,13 +27,13 @@ export const Hero  = ({ numberOfTools }: HeroProps) => {
 
     return (
         <div className="pb-8">
-            <h1 className="mb-6 font-black tracking-tight leading-none lg:text-8xl text-7xl dark:text-white w-full max-w-[90%] max-lg:max-w-full pb-6"
+            <h1 className="mb-6 font-black tracking-tight leading-none text-8xl lg:text-[12vh] dark:text-white w-full max-w-[90%] max-lg:max-w-full pb-6"
                 style={{
                     backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`,
                 }}>{t("hero.dope")}<br/>{numberOfTools} {t("hero.creatives")}</h1>
             <div className="flex">
                 <ChickenSticker/>
-                <p className="text-2xl max-w-[50rem] ml-4 text-gray-900 leading-snug">{t("hero.catalog")}</p>
+                <p className="text-2xl lg:text-[2vh] max-w-[50ch] ml-4 text-gray-900 leading-snug">{t("hero.catalog")}</p>
             </div>
         </div>
     )

@@ -3,18 +3,20 @@
         "title": "AI for Creatives",
         "description": "Acelera tu creatividad con este catálogo creado por humanos. Actualizado diariamente. Estamos fascinados por el futuro de la creatividad: ser original y crear nuevos mundos. ¡El cambio es bueno, súbe de nivel!",
         "followUs": "@Follow us",
+        "scrollToTop": "Scroll to Top",
         "toolSticker": {
-            "lastToolAdded": "Ultima tool añadida"
+            "lastToolAdded": "Última tool añadida"
         },
         "header": {
-            "follow": "@Siguenos",
+            "follow": "@Síguenos",
             "contact": "Contacto",
-            "submit": "Sugiere",
-            "subscribe": "Subscribete"
+            "submit": "Recomienda",
+            "subscribe": "Subscríbete"
         },
         "categories": {
             "viewAll": "Ver categorias",
-            "subscribeForUpdates": "Recibe updates"
+            "subscribeForUpdates": "Recibe actualizaciones",
+            "scrollToBottom": "Escrolar abajo"
         },
         "tools": {
             "showAllTools": "Mostrar todas",
@@ -22,6 +24,7 @@
             "tool": "tool",
             "tools": "tools",
             "copyLink": "Copiar enalce",
+            "copyLinkDialog" : "Enlace copiado al portapapeles. ¡Listo para pegar donde quieras!",
             "shareX": "Compartir en X",
             "shareLinkedin": "Compartir en Linkedin",
             "shareLove": "Share Love",
@@ -124,7 +127,7 @@
         "p7": "Si está utilizando cualquier otro navegador web, visite los documentos de soporte oficiales de su navegador."
     },
     "Submit": {
-        "headline": "Submit a tool",
+        "headline": "Recomienda una tool",
         "p1": "¿Estás preparado para deslumbrarnos con tus habilidades tool-tasticas?",
         "p2": "Bueno, ponte tu cinturón de tools y ¡Empezemos!",
         "headline2": "Curado por humanos",

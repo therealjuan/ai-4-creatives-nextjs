@@ -69,7 +69,7 @@ export default function RootLayout({
                   {children}
             </div>
           </NextIntlClientProvider>
-          <div className="grid grid-cols-2 px-8 pt-8 pb-20 gap-8">
+          <div className="flex flex-col lg:flex-row px-8 pt-8 pb-20 gap-8">
             <NewsletterForm 
               stay={t("newsletter.stay")} 
               toolbox={t("newsletter.toolbox")} 
@@ -87,8 +87,8 @@ export default function RootLayout({
               mission={t("onut.mission")} />
           </div>
           <Footer />
-            <a href="#top" className="w-8 h-8 fixed bottom-8 right-4 float-right mr-8 transition-all duration-500">
-              <Image alt="Scroll to top" src={arrowImg} className='rotate-180'></Image>
+            <a href="#top" className="w-10 h-10 fixed bottom-4 right-4 float-right mr-0 transition-all duration-500">
+              <Image alt={t('scrollToTop')} src={arrowImg} className='rotate-180 w-full'></Image>
             </a>
           <Scripts />
         </body>

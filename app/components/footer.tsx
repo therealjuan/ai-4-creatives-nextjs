@@ -10,19 +10,23 @@ export const Footer = () => {
 
     return (
         <div className="bg-purple-900 py-20 px-8">
-            <div className="grid grid-cols-2 gap-8">
-                <div className="h-full flex">
+            <div className="flex flex-col lg:flex-row justify-between w-full gap-8 items-baseline lg:items-end">
+                <div className="lg:w-1/2 h-full flex order-last lg:-order-1 items-end" >
                     <Link href="/" className='self-end'>
                         <Image src={FooterLogo} className="" alt="AI for Creatives"></Image>
                     </Link>
                 </div>
-                <div className="grid grid-cols-2 max-w-screen-xl text-xl mx-auto gap-4 w-full">
+                <div className='lg:w-1/2 flex flex-col lg:flex-row gap-4'>
+                <div className="flex flex-col w-50 text-xl lg:text-[1.6vh] mx-auto gap-4 w-full">
                     <Link href="/terms-and-conditions" className="hover:text-white">{t("terms")}</Link>
                     <Link href="/privacy-policy" className="hover:text-white">{t("privacy")}</Link>
                     <Link href="/policy-of-cookies" className="hover:text-white">{t("cookie")}</Link>
+                </div>
+                <div className="flex flex-col w-50 text-xl lg:text-[1.6vh] mx-auto gap-4 w-full">
                     <Link href="/submit" className="hover:text-white">{t("submit")}</Link>
                     <Link href="https://twitter.com/ai_forcreatives" target="_blank" className="hover:text-white">{t("followUs")}</Link>
                     <Link href="mailto:hello@aiforcreativ.es" className="hover:text-white">{t("contact")}</Link>
+                </div>
                 </div>
             </div>
         </div>

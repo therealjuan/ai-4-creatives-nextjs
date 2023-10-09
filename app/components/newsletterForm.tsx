@@ -74,11 +74,11 @@ export const NewsletterForm = ({ stay, toolbox, join, placeholder, subscribe, th
     };
 
     return (
-        <div id="newsletter">
-            <h2 className="mb-4 text-5xl pb-4 font-black tracking-tight leading-extra w-full" style={{
+        <div id="newsletter" className='w-full lg:w-1/2'>
+            <h2 className="mb-4 text-5xl pb-4 font-black tracking-tight leading-extra" style={{
                     backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`,
                 }}>{stay}<br/>{toolbox}</h2>
-            <p className="mb-8 text-xl">{join}</p>
+            <p className="mb-8 text-xl lg:text-[1.6vh]">{join}</p>
                 <form onSubmit={handleSubmit(onSubmit)} className='pb-10'>
                     <div className='flex w-full gap-4'>
                         <Input 
@@ -86,13 +86,13 @@ export const NewsletterForm = ({ stay, toolbox, join, placeholder, subscribe, th
                             type="email"
                             onChange={() => setSubscribed(false)}
                             placeholder={placeholder}
-                            className='bg-white text-xl box-border pb-[.6rem] h-auto rounded-none max-w-[30rem]' 
+                            className='bg-white text-xl lg:text-[1.6vh] box-border pb-[.6rem] h-auto rounded-none max-w-[30rem]' 
                             id="email" 
                         /> 
-                        <Button size="sm" disabled={isSubmitting} className='bg-black text-xl p-6 rounded-none hover:bg-green-500 hover:text-black'>{subscribe}</Button>
+                        <Button size="sm" disabled={isSubmitting} className='bg-black text-xl lg:text-[1.6vh] p-6 rounded-none hover:bg-green-500 hover:text-black'>{subscribe}</Button>
                     </div>
                     {errors.email && (
-                        <p className="mb-8 p-2 text-xl text-black">{`${errors.email.message}`}</p>
+                        <p className="mb-8 p-2 text-xl lg:text-[1.6vh] text-black">{`${errors.email.message}`}</p>
                     )}
                     {subscribed && (
                         <p className="mb-8 p-2 text-lg text-black">{thank}</p>

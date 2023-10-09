@@ -26,7 +26,7 @@ export const ToolCounter = ({
     
 
     return (
-        <div className="py-4 text-2xl font-bold">{t("showing")} {totalString} {selectedCategory} {toolString}</div>
+        <div className="py-4 text-2xl lg:text-[2vh] font-bold">{t("showing")} {totalString} {selectedCategory} {toolString}</div>
     )
 
 }

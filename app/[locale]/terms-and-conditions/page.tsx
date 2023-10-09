@@ -23,7 +23,7 @@ const TermsPage = () => {
       <div className="px-8">
             <h1 className="mb-8 font-black tracking-tight leading-none text-8xl dark:text-white w-full" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px` }}>{t("headline")}</h1>
             <div className="grid grid-cols-8 mb-0">
-                <div className="col-span-5 text-xl leading-8">
+                <div className="col-span-5 text-xl lg:text-[1.6vh] leading-8">
                     <p className="mb-8">{t("lastUpdated")}</p>
                     <p className="mb-8">{t("p1")}</p>
                     <h2 className="font-black leading-tight text-4xl mb-6" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`}}>{t("h2-1")}</h2>
@@ -92,9 +92,9 @@ const TermsPage = () => {
                     <h3 className="font-black text-3xl leading-tight mb-6" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`}}>United States Legal Compliance</h3>
                     <p className="mb-8">You represent and warrant that (i) You are not located in a country that is subject to the United States government embargo, or that has been designated by the United States government as a &quot;terrorist supporting&quot; country, and (ii) You are not listed on any United States government list of prohibited or restricted parties.</p>
                     <h3 className="font-black text-3xl mb-8" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`}}>Severability and Waiver</h3>
-                    <h4 className='font-bold text-2xl leading-tight mb-4'>Severability</h4>
+                    <h4 className='font-bold text-2xl lg:text-[2vh] leading-tight mb-4'>Severability</h4>
                     <p className="mb-8">If any provision of these Terms is held to be unenforceable or invalid, such provision will be changed and interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable law and the remaining provisions will continue in full force and effect.</p>
-                    <h4 className='font-bold text-2xl leading-tight mb-4'>Waiver</h4>
+                    <h4 className='font-bold text-2xl lg:text-[2vh] leading-tight mb-4'>Waiver</h4>
                     <p className="mb-8">Except as provided herein, the failure to exercise a right or to require performance of an obligation under these Terms shall not effect a party&apos;s ability to exercise such right or require such performance at any time thereafter nor shall the waiver of a breach constitute a waiver of any subsequent breach.</p>
                     <h3 className="font-black text-3xl leading-tight mb-6" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`}}>Translation Interpretation</h3>
                     <p className="mb-6">These Terms and Conditions may have been translated if We have made them available to You on our Service.</p>

@@ -3,6 +3,8 @@
         "title": "AI for Creatives",
         "description": "Fast-track your creativity with this catalog curated by humans. Updated daily. We're stoked for the future of creativity: being original and making new worlds. Change is good, level up!",
         "followUs": "@Follow us",
+        "scrollToTop": "Scroll to Top",
+        
         "toolSticker": {
             "lastToolAdded": "Last tool added"
         },
@@ -14,7 +16,8 @@
         },
         "categories": {
             "viewAll": "View All",
-            "subscribeForUpdates": "Subscribe for updates"
+            "subscribeForUpdates": "Subscribe for updates",
+            "scrollToBottom": "Scroll to Bottom"
         },
         "tools": {
             "showAllTools": "Show all tools",
@@ -22,6 +25,7 @@
             "tool": "tool",
             "tools": "tools",
             "copyLink": "Copy link",
+            "copyLinkDialog" : "Link copied to the clipboard. Paste it away!",
             "shareX": "Share in X",
             "shareLinkedin": "Share in Linkedin",
             "shareLove": "Share Love",
