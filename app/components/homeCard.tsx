@@ -7,9 +7,9 @@ import {
 interface DataProps {
     image:          string;
     description:    string;
-    descriptionEs:  string;
+    descriptionEs:  string | null;
     source:         string;
-    date:           string;
+    date:           string | null;
   }
   
   interface HomeCardProps {

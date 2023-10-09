@@ -83,19 +83,25 @@ async function uploadToolsDataTranslation(dataTools: DataTool[]) {
       categoryName:   '',
       categoryId:     ''
     }
+
     if (typeof categoryName === "string") {
       existingCategory = await prismadb.category.findMany({
         where: { key: transformString(categoryName) }
       });
     }
 
-    toolData.categoryId = existingCategory[0]["id"];
-    toolData.categoryName = existingCategory[0]["name"];
- 
+    if (existingCategory && existingCategory.length > 0) {
+      toolData.categoryId = existingCategory[0]["id"];
+      toolData.categoryName = existingCategory[0]["name"];
+  } else {
+      toolData.categoryId = "";
+      toolData.categoryName = "";
+  }
       
     console.log(toolData);
+    
     await prismadb.tool.create({
-      data: toolData
+      data: toolData as any
     });
         
     }
@@ -116,7 +122,9 @@ export default async function Page() {
       sourceLink:     row[7],
       image:          row[8],
       categoryName:   row[9],
-      categoryId:     row[10]
+      categoryId:     row[10],
+      category: '',
+      esRevisado: ''
   }));
 
   if (dataPick) {
