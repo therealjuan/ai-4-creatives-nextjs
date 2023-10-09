@@ -12,6 +12,7 @@ datasource db {
 model Category {
   id      String @id @default(uuid())
   name    String
+  nameEs  String?
   key     String @unique
   tools   Tool[]
 }

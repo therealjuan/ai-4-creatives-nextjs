@@ -11,10 +11,12 @@ import arrowImg from "/public/dropdown-arrow.svg"
 
 interface CategoriesProps {
     data: Category[];
+    locale: string
 }
 
 export const Categories = ({
-    data
+    data,
+    locale
 }: CategoriesProps) => {
 
     const router = useRouter();
@@ -75,7 +77,7 @@ export const Categories = ({
                 hover:border-green-500
                 hover:text-black
                 `, !selectedCategory ? "bg-green-500 text-black" : "bg-red"
-                )}>All</button>
+                )}>{t('all')}</button>
                 {data.map((item) => (
                         <button 
                                 onClick={() => onClick(item.key)}
@@ -89,7 +91,10 @@ export const Categories = ({
                                     px-3 
                                     pt-1 
                                     pb-1.5 
-                        `, item.key === selectedCategory ? "bg-green-500 text-black hover:bg-green-500 hover:text-black" : "text-green-500 hover:bg-green-500 hover:text-black")}>{item.name}</button>     
+                        `, item.key === selectedCategory ? "bg-green-500 text-black hover:bg-green-500 hover:text-black" : "text-green-500 hover:bg-green-500 hover:text-black")}>
+                            {locale === 'en' && item.name}
+                            {locale === 'es' && item.nameEs}
+                            </button>     
                 ))}
                                 <button 
                     onClick={() => scrollToElement("newsletter")} className={cn(`text-green-500 bg-transparent text-xl lg:text-[1.6vh] border-b-1 mx-1 mb-2 border-b border-green-500 hover:text-black hover:border-black`)}>{t("subscribeForUpdates")}</button>            

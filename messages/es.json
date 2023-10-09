@@ -14,6 +14,7 @@
             "subscribe": "Subscríbete"
         },
         "categories": {
+            "all": "Todas",
             "viewAll": "Ver categorias",
             "subscribeForUpdates": "Recibe actualizaciones",
             "scrollToBottom": "Escrolar abajo"
@@ -52,8 +53,8 @@
         "newsletter": {
             "stay": "Mantente informado:",
             "toolbox" : "Actualiza tus herramientas",
-            "join": "Unete al newslettter de AI for Creatives y preparate a reirte como un jefe de la creatividad!",
-            "subscribe": "Subscribete",
+            "join": "¡Únete al newslettter de AI for Creatives y preparate a reirte como un jefe de la creatividad!",
+            "subscribe": "Subscríbete",
             "placeholder": "¡Dános tu email, recibe genialidades!",
             "thank": "¡Gracias! ¡Hemos recibido tu correo!"
         },
@@ -61,10 +62,10 @@
             "openFor": "Abiertos a",
             "collaborations": "colaboraciones",
             "artCommissions": "comisiones de arte",
-            "optimism": "optimismo & energia positiva",
-            "humans": "conocer humanos increibles",
+            "optimism": "optimismo & energías positivas",
+            "humans": "conocer humanos increíbles",
             "catalog" : "Este catálogo lo mantiene",
-            "mission": "¡En esencia, nuestro objetivo es compartir la riqueza del conocimiento! Nuestra misión es crear una plataforma donde usted, ¡sí, usted! pueda acceder fácilmente y contribuir a una colección de información valiosa en rápida expansión. Únase a nosotros en la búsqueda de conocimiento!"
+            "mission": "¡En esencia, nuestro objetivo es compartir la riqueza del conocimiento! Nuestra misión es crear una plataforma donde usted, ¡Sí, usted! pueda acceder fácilmente y contribuir a una colección de información valiosa en rápida expansión. Únase a nosotros en la búsqueda de conocimiento!"
         }
     },
     "Privacy": {

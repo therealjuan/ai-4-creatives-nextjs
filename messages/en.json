@@ -15,6 +15,7 @@
             "subscribe": "Subscribe"
         },
         "categories": {
+            "all": "All",
             "viewAll": "View All",
             "subscribeForUpdates": "Subscribe for updates",
             "scrollToBottom": "Scroll to Bottom"

@@ -23,7 +23,7 @@ const Home = async ({ params }: { params: { locale: string; }}) => {
             <BlinkSticker />
         </div>
       </div>
-      <Categories data={categories}></Categories>
+      <Categories data={categories} locale={params.locale}></Categories>
       <ToolList data={tools} locale={params.locale}></ToolList>
     </main>
   )
