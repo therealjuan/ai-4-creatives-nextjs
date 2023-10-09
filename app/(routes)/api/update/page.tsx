@@ -109,33 +109,33 @@ async function uploadToolsDataTranslation(dataTools: DataTool[]) {
 
 export default async function Page() {
 
-  const rawData = await fetchGoogleSheetData(`'#GlossaryAI'!A2:I`);
+  // const rawData = await fetchGoogleSheetData(`'#GlossaryAI'!A2:I`);
 
-  const dataPick: DataTool[] | undefined = rawData?.map(row => ({
-      parent:         row[0],
-      id:             row[1],
-      name:           row[2],
-      link:           row[3],
-      description:    row[4],
-      descriptionEs:  row[5],
-      source:         row[6],
-      sourceLink:     row[7],
-      image:          row[8],
-      categoryName:   row[9],
-      categoryId:     row[10],
-      category: '',
-      esRevisado: ''
-  }));
+  // const dataPick: DataTool[] | undefined = rawData?.map(row => ({
+  //     parent:         row[0],
+  //     id:             row[1],
+  //     name:           row[2],
+  //     link:           row[3],
+  //     description:    row[4],
+  //     descriptionEs:  row[5],
+  //     source:         row[6],
+  //     sourceLink:     row[7],
+  //     image:          row[8],
+  //     categoryName:   row[9],
+  //     categoryId:     row[10],
+  //     category: '',
+  //     esRevisado: ''
+  // }));
 
-  if (dataPick) {
-    uploadToolsDataTranslation(dataPick);
-  }
+  // if (dataPick) {
+  //   uploadToolsDataTranslation(dataPick);
+  // }
   
   return (
     <div>
-      {rawData && rawData.map((item, index) => (
+      {/* {rawData && rawData.map((item, index) => (
         <div key={index}>{item}</div>
-      ))}
+      ))} */}
     </div>
   );
 }

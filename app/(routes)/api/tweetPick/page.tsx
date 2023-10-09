@@ -58,27 +58,27 @@ async function fetchGoogleSheetData(rangeSheet: string) {
 
 export default async function Page() {
 
-  const rawData = await fetchGoogleSheetData(`'#TweetWeb'!A2:F2`);
+//   const rawData = await fetchGoogleSheetData(`'#TweetWeb'!A2:F2`);
 
-    // Transform rawData to PickedData[] if rawData is defined
-    const dataPick: TweetData[] | undefined = rawData?.map(row => ({
-      source:           row[0],
-      date:             row[1],
-      time:             row[2],
-      description:      row[3],
-      descriptionEs:    row[4],
-      image:            row[4],
-  }));
+//     // Transform rawData to PickedData[] if rawData is defined
+//     const dataPick: TweetData[] | undefined = rawData?.map(row => ({
+//       source:           row[0],
+//       date:             row[1],
+//       time:             row[2],
+//       description:      row[3],
+//       descriptionEs:    row[4],
+//       image:            row[4],
+//   }));
 
-  if (dataPick) {
-    uploadCardsData(dataPick);
-  }
+//   if (dataPick) {
+//     uploadCardsData(dataPick);
+//   }
   
   return (
     <div>
-      {rawData && rawData.map((item, index) => (
+      {/* {rawData && rawData.map((item, index) => (
         <div key={index}>{item}</div>
-      ))}
+      ))} */}
     </div>
   );
 }

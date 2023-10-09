@@ -57,26 +57,26 @@ async function fetchGoogleSheetData(rangeSheet: string) {
   
 export default async function Page() {
 
-  const rawData = await fetchGoogleSheetData(`'#PickWeb'!A2:E2`);
+  // const rawData = await fetchGoogleSheetData(`'#PickWeb'!A2:E2`);
 
-    // Transform rawData to PickedData[] if rawData is defined
-    const dataPick: PickedData[] | undefined = rawData?.map(row => ({
-      image: row[0],
-      description: row[1],
-      descriptionEs: row[2],
-      source: row[3],
-      date: row[4],
-  }));
+  //   // Transform rawData to PickedData[] if rawData is defined
+  //   const dataPick: PickedData[] | undefined = rawData?.map(row => ({
+  //     image: row[0],
+  //     description: row[1],
+  //     descriptionEs: row[2],
+  //     source: row[3],
+  //     date: row[4],
+  // }));
 
-  if (dataPick) {
-      uploadPickedTool(dataPick);
-  }
+  // if (dataPick) {
+  //     uploadPickedTool(dataPick);
+  // }
   
   return (
     <div>
-      {rawData && rawData.map((item, index) => (
+      {/* {rawData && rawData.map((item, index) => (
         <div key={index}>{item}</div>
-      ))}
+      ))} */}
     </div>
   );
 }
