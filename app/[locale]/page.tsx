@@ -8,7 +8,7 @@ import { BlinkSticker } from "../components/blinkSticker";
 
 const Home = async ({ params }: { params: { locale: string; }}) => {
 
-  const categories = await prismadb.category.findMany();
+  const categories = await prismadb.category.findMany({ orderBy: { name: 'asc' }});
   const cards = await prismadb.homepageCard.findFirst();
   const pickedTool = await prismadb.pickedTool.findFirst();
   const tools = await prismadb.tool.findMany();

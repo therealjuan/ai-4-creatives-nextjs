@@ -286,7 +286,12 @@ h1#feedbackfin__title {
   aspect-ratio: 16/9;
 }
 
+html[lang=es] h1 {
+  font-size: 10vh;
+}
+
 @media (max-height: 800px) {
+
   .text-8xl {
     font-size: 5.5rem !important;
   }

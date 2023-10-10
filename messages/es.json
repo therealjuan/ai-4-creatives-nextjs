@@ -1,11 +1,11 @@
 {
     "Index": {
         "title": "AI for Creatives",
-        "description": "Acelera tu creatividad con este catálogo creado por humanos. Actualizado diariamente. Estamos fascinados por el futuro de la creatividad: ser original y crear nuevos mundos. ¡El cambio es bueno, súbe de nivel!",
+        "description": "Accelera tu creatividad con este catálogo creado por y para humanos. Actualizado constantemente. Estamos fascinados por el futuro de la creatividad: cómo ser original y crear nuevos mundos en 2023. «Sé el cambio que quieres ver en el mundo». (Mahatma Gandhi).",
         "followUs": "@Follow us",
         "scrollToTop": "Scroll to Top",
         "toolSticker": {
-            "lastToolAdded": "Última tool añadida"
+            "lastToolAdded": "Última herramienta añadida"
         },
         "header": {
             "follow": "@Síguenos",
@@ -16,29 +16,29 @@
         "categories": {
             "all": "Todas",
             "viewAll": "Ver categorias",
-            "subscribeForUpdates": "Recibe actualizaciones",
+            "subscribeForUpdates": "Recibir novedades",
             "scrollToBottom": "Escrolar abajo"
         },
         "tools": {
             "showAllTools": "Mostrar todas",
             "showing": "Mostrando",
-            "tool": "tool",
-            "tools": "tools",
+            "tool": "herramienta",
+            "tools": "herramientas",
             "copyLink": "Copiar enalce",
             "copyLinkDialog" : "Enlace copiado al portapapeles. ¡Listo para pegar donde quieras!",
             "shareX": "Compartir en X",
             "shareLinkedin": "Compartir en Linkedin",
-            "shareLove": "Share Love",
+            "shareLove": "Compartir",
             "firstSeen": "Visto por primera vez en:"
         },
         "hero": {
-            "dope": "Genial catálogo de AI:",
-            "creatives": "tools para Creativos",
-            "catalog": "Acelera tu creatividad con este catálogo creado por humanos. Actualizado diariamente. Estamos fascinados por el futuro de la creatividad: ser original y crear nuevos mundos. ¡El cambio es bueno, súbe de nivel!"
+            "dope": "¡Un catálogo alucinante!",
+            "creatives": "herramientas de IA para Creativos",
+            "catalog": "Accelera tu creatividad con este catálogo creado por y para humanos. Actualizado constantemente. Estamos fascinados por el futuro de la creatividad: cómo ser original y crear nuevos mundos en 2023. «Sé el cambio que quieres ver en el mundo». (Mahatma Gandhi)."
         },
         "homeCard": {
             "todayInAI": "Hoy en AI",
-            "todayTool": "Tool del día",
+            "todayTool": "Herramienta del día",
             "open": "Visitar",
             "source": "Fuente"
         },        
@@ -46,26 +46,26 @@
             "terms": "Términos y Condiciones",
             "privacy": "Política de Privacidad",
             "cookie": "Política de Cookies",
-            "submit": "Sugiere una tool",
+            "submit": "Sugiere una herramienta",
             "followUs": "@Síguenos",
             "contact": "Contacta"
         },
         "newsletter": {
             "stay": "Mantente informado:",
-            "toolbox" : "Actualiza tus herramientas",
-            "join": "¡Únete al newslettter de AI for Creatives y preparate a reirte como un jefe de la creatividad!",
+            "toolbox" : "Actualiza tus herramientas de IA",
+            "join": "¡Suscríbete a la newslettter de AI for Creatives y prepárate para disfrutar de tu creatividad!",
             "subscribe": "Subscríbete",
-            "placeholder": "¡Dános tu email, recibe genialidades!",
+            "placeholder": "¡Introduce tu email, recibe contenido creativo!",
             "thank": "¡Gracias! ¡Hemos recibido tu correo!"
         },
         "onut": {
             "openFor": "Abiertos a",
             "collaborations": "colaboraciones",
-            "artCommissions": "comisiones de arte",
-            "optimism": "optimismo & energías positivas",
+            "artCommissions": "comisiones de Arte",
+            "optimism": "optimismo y energías positivas",
             "humans": "conocer humanos increíbles",
             "catalog" : "Este catálogo lo mantiene",
-            "mission": "¡En esencia, nuestro objetivo es compartir la riqueza del conocimiento! Nuestra misión es crear una plataforma donde usted, ¡Sí, usted! pueda acceder fácilmente y contribuir a una colección de información valiosa en rápida expansión. Únase a nosotros en la búsqueda de conocimiento!"
+            "mission": "¡En esencia, nuestro objetivo es compartir la riqueza del conocimiento! Nuestra misión es crear una plataforma donde usted, ¡Tú! ¡Sí, tú! pueda acceder fácilmente y contribuir a una colección de información valiosa en rápida expansión. Únase a nosotros en la búsqueda y disfrute del conocimiento!"
         }
     },
     "Privacy": {
@@ -128,11 +128,11 @@
         "p7": "Si está utilizando cualquier otro navegador web, visite los documentos de soporte oficiales de su navegador."
     },
     "Submit": {
-        "headline": "Recomienda una tool",
-        "p1": "¿Estás preparado para deslumbrarnos con tus habilidades tool-tasticas?",
-        "p2": "Bueno, ponte tu cinturón de tools y ¡Empezemos!",
+        "headline": "Recomienda una herramienta",
+        "p1": "¿Estás preparado para deslumbrarnos con tus habilidades herramient-ásticas?",
+        "p2": "Bueno, ponte tu cinturón de herramientas y ¡Empezemos!",
         "headline2": "Curado por humanos",
-        "p3": "Vamos a asegurarnos que pasas el tool-o-metro. Este dispositivo mide la genialidad de una tool en una escala de 'meh' a 'rompedora'. No aceptamos nada por debajo de 'super cool'. La curaci'on es manual. En una semana, te notiicaremos con actualizaciones. ¡Recuerda, la seguridad es lo primero! Por favor, nada de tools que involucran tanques de tiburones o motores de jet. Estamos todavia recuperandonos de la última vez.",
+        "p3": "Vamos a asegurarnos que pasas el herramient-o-metro. Este dispositivo mide la genialidad de una herramienta en una escala de 'meh' a 'rompedora'. No aceptamos nada por debajo de 'super cool'. La curación es manual. En una semana, te notiicaremos con actualizaciones. ¡Recuerda, la seguridad es lo primero! Por favor, nada de herramientas que involucran tanques de tiburones o motores de jet. Estamos todavia recuperandonos de la última vez.",
         "thank": "Muchas gracias"
     },
     "Terms": {
