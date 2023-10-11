@@ -3,7 +3,6 @@
 
 import Image from 'next/image';
 import arrowImg from "/public/dropdown-arrow.svg"
-
 import { useTranslations } from 'next-intl';
 
 export const ScrollToTop = () => {
