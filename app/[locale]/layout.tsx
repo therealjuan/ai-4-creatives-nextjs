@@ -6,8 +6,7 @@ import { GradientBackground } from "../components/gradientBackground";
 import { Stickers } from "../components/stickers";
 import { NewsletterForm } from '../components/newsletterForm';
 import { ONUT } from '../components/ONUT';
-import Image from 'next/image';
-import arrowImg from "/public/dropdown-arrow.svg"
+import { ScrollToTop } from '../components/scrollToTop';
 import Script from 'next/script'
 import { Scripts } from '../components/scripts'
 import {notFound} from 'next/navigation';
@@ -65,7 +64,7 @@ export default function RootLayout({
               <GradientBackground />
               <Stickers />
             <Header follow={t("header.follow")} contact={t("header.contact")} submit={t("header.submit")} subscribe={t("header.subscribe")} locale={locale} />
-            <div className='pt-8 pb-8 mx-auto flex flex-col'>
+            <div className='pt-2 lg:pt-6 pb-8 mx-auto flex flex-col'>
                   {children}
             </div>
           </NextIntlClientProvider>
@@ -87,9 +86,9 @@ export default function RootLayout({
               mission={t("onut.mission")} />
           </div>
           <Footer />
-            <a href="#top" className="w-10 h-10 fixed bottom-4 right-4 float-right mr-0 transition-all duration-500">
-              <Image alt={t('scrollToTop')} src={arrowImg} className='rotate-180 w-full'></Image>
-            </a>
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            <ScrollToTop />
+          </NextIntlClientProvider>
           <Scripts />
         </body>
       </html>

@@ -39,8 +39,8 @@ export const ONUT = ({ openFor, artCommissions, collaborations, optimism, humans
     loop: true,
   }}/>
   </span></h2>
-            <p className="mb-6 text-xl lg:text-[1.6vh]">{catalog} <a href="https://onut.space" className='border-b-[1.5px] border-black hover:text-green-500 hover:border-green-500' target="_blank">ONUT</a>.</p>
-            <p className="mb-4 text-xl lg:text-[1.6vh]">{mission}</p>
+            <p className="mb-6 text-standard">{catalog} <a href="https://onut.space" className='border-b-[1.5px] border-black hover:text-green-500 hover:border-green-500' target="_blank">ONUT</a>.</p>
+            <p className="mb-4 text-standard">{mission}</p>
         </div>
     )
 }

@@ -21,7 +21,7 @@ const PrivacyPage = () => {
 
     return ( 
         <div className="px-8">
-            <h1 className="mb-8 font-black tracking-tight leading-tight pb-6 text-8xl dark:text-white w-full" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px` }}>{t("headline")}</h1>
+            <h1 className="mb-8 font-black tracking-tight leading-tight pb-6 text-hero dark:text-white w-full" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px` }}>{t("headline")}</h1>
             <div className="grid grid-cols-8 mb-0">
                 <div className="col-span-5 text-xl leading-8">
                     <p className="mb-6">{t("p1a")} https://aiforcreativ.es, {t("pb")}</p>

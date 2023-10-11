@@ -44,7 +44,7 @@ interface DataTool {
       description:    string,
       esRevisado:     string,
       descriptionEs?: string,
-      source:         string,
+      source?:        string,
       sourceLink:     string,
       image:          string,
       categoryName:   string,
@@ -55,10 +55,10 @@ interface DataTool {
 async function uploadToolsDataTranslation(dataTools: DataTool[]) {
 
   await prismadb.tool.deleteMany();
-  // console.log(dataTools);
+  console.log(dataTools);
 
   for (const item of dataTools) { 
-    delete item.descriptionEs;
+    delete item.source;
     
     const keys = Object.keys(item) as (keyof DataTool)[];
     

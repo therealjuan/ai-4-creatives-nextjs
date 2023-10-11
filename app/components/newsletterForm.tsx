@@ -78,24 +78,24 @@ export const NewsletterForm = ({ stay, toolbox, join, placeholder, subscribe, th
             <h2 className="mb-4 text-5xl pb-4 font-black tracking-tight leading-extra" style={{
                     backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`,
                 }}>{stay}<br/>{toolbox}</h2>
-            <p className="mb-8 text-xl lg:text-[1.6vh]">{join}</p>
+            <p className="mb-8 text-standard">{join}</p>
                 <form onSubmit={handleSubmit(onSubmit)} className='pb-10'>
-                    <div className='flex w-full gap-4'>
+                    <div className='flex w-full gap-4 flex-col lg:flex-row'>
                         <Input 
                             {...register("email")} 
                             type="email"
                             onChange={() => setSubscribed(false)}
                             placeholder={placeholder}
-                            className='bg-white text-xl lg:text-[1.6vh] box-border pb-[.6rem] h-auto rounded-none max-w-[30rem]' 
+                            className='bg-white text-standard box-border pb-[.6rem] h-auto rounded-none max-w-[30rem] max-lg:max-w-none max-lg:p-4' 
                             id="email" 
                         /> 
-                        <Button size="sm" disabled={isSubmitting} className='bg-black text-xl lg:text-[1.6vh] p-6 rounded-none hover:bg-green-500 hover:text-black'>{subscribe}</Button>
+                        <button disabled={isSubmitting} className='bg-black text-standard-2x text-white p-4 rounded-none hover:bg-green-500 hover:text-black'>{subscribe}</button>
                     </div>
                     {errors.email && (
-                        <p className="mb-8 p-2 text-xl lg:text-[1.6vh] text-black">{`${errors.email.message}`}</p>
+                        <p className="mb-8 p-2 text-standard text-black max-lg:mb-0 max-lg:p-2">{`${errors.email.message}`}</p>
                     )}
                     {subscribed && (
-                        <p className="mb-8 p-2 text-lg text-black">{thank}</p>
+                        <p className="mb-8 p-2 text-standard text-black max-lg:mb-0 max-lg:p-2">{thank}</p>
                     )}                    
                 </form>
         </div>

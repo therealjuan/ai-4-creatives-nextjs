@@ -2,17 +2,6 @@
 
 import { useState } from 'react';
 
-
-import {
-    Table,
-    TableBody,
-    TableCell,
-    TableRow,
-  } from "@/components/ui/table"
-
-import { Button } from "@/components/ui/button";
-import { useRouter } from 'next-intl/client';
-
 import GetCategoryFromURL from "./getCategoryFromURL";
 import transformToString from "./transformToString";
 import {useTranslations} from 'next-intl';
@@ -87,8 +76,8 @@ export const ToolList = ({
                 <ToolCounter total={filteredData.length} selectedCategory={filteredData[0].categoryName} /> 
             </div>
             {displayedData.map((item, index) => (
-            <div className={`gap-2 py-3 transition-all ${index < displayedData.length - 1 ? 'border-b-[1px] border-gray-500' : ''}`} key={item.id}>
-                <div className="w-full px-8 gap-8 mx-auto py-8 flex flex-col lg:flex-row">
+            <div className={`gap-2 py-2 transition-all ${index < displayedData.length - 1 ? 'border-b-[1px] border-gray-500' : ''}`} key={item.id}>
+                <div className="w-full px-8 gap-8 mx-auto py-6 lg:py-8 flex flex-col lg:flex-row">
                     <div className="lg:w-1/5 flex flex-col justify-space-between self-stretch">
                         <a href={item.link} className='flex gap-2' target="_blank">
                             <span className="font-bold color-white text-3xl product-description-title px-[0.2rem] pb-[0.3rem] hover:text-green-500">{item.name}</span>
@@ -101,29 +90,33 @@ export const ToolList = ({
                                 src={`https://d3jk7oka2i5czj.cloudfront.net/images/${item.id}.png`} 
                                 alt={`${item.name}`} 
                                 fill
+                                priority={true}
                                 placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
                                 className='w-full h-auto scale-100 lg:hover:scale-105' />
                         </a>
                     </div>
-                    <div className="lg:w-1/2 flex-1 text-xl lg:text-[1.6vh]">
-                        { locale === 'en' && ( <p className='mb-4'>{item.description}</p>)}
-                        { locale === 'es' && ( <p className='mb-4'>{item.descriptionEs}</p>)}
-                        <p className='mb-4'>{t('firstSeen')} <a href={item.sourceLink} className='border-b-[1.5px] border-black hover:text-green-500 hover:border-green-500' target="_blank">{item.source}</a></p>
+                    <div className="lg:w-1/2 flex-1">
+                        { locale === 'en' && ( <p className='mb-4 text-standard'>{item.description}</p>)}
+                        { locale === 'es' && ( <p className='mb-4 text-standard'>{item.descriptionEs}</p>)}
+                        <p className='text-standard mb-0 flex flex-col items-baseline gap-1 lg:block lg:gap-0'>{t('firstSeen')} <a href={item.sourceLink} className='text-standard' target="_blank"><span className='text-standard border-black border-b-[1.5px] border-black hover:text-green-500 hover:border-green-500'>{item.source}</span></a></p>
                     </div>
-                    <div className="relative flex flex-col min-w-[20vw] items-baseline w-1/12">
+                    <div className="relative flex flex-row gap-4 lg:flex-col items-center lg:items-start lg:gap-6 min-w-[20vw]">
                         <button 
                                 className='
                             border-2 
                             border-gray-600
                             text-gray-600 
                             rounded-md
-                            mb-6
+                            mb-0
+                            mt-0
                             cursor-default
                             mr-4
-                            text-lg
+                            text-standard
                             px-4 
-                            pt-1 
+                            pt-2
                             pb-2
+                            lg:pt-1
+                            lg:pb-2
                             '>{item.categoryName}</button>
                         <FlipButton toolName={item.name} url={item.link}></FlipButton>
                     </div>
@@ -132,10 +125,10 @@ export const ToolList = ({
             ))}
 
             {!showAll && filteredData.length > defaultItems && (
-                <div className="">
-                    <Button onClick={() => setShowAll(true)} className="w-full rounded-none bg-black hover:bg-green-500 hover:text-black text-xl lg:text-[1.6vh] p-8">
+                <div className="text-standard-2x mt-2">
+                    <button onClick={() => setShowAll(true)} className="w-full py-6 text-white rounded-none bg-black hover:bg-green-500 hover:text-black p-8">
                         {t("showAllTools")}
-                    </Button>
+                    </button>
                 </div>
             )}
         </div>

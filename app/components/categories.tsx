@@ -59,18 +59,18 @@ export const Categories = ({
     };
 
     return (
-            <div className="px-8 gap-1 mx-auto flex flex-row flex-wrap w-full sticky z-50 top-0 py-4 backdrop-blur" id="categories">
+            <div className="text-standard px-8 mx-auto flex flex-row flex-wrap w-full sticky z-50 top-0 py-4 backdrop-blur" id="categories">
                 <div className="lg:block hidden">
                 <button 
                     onClick={() => onClick(undefined)}
                     className={cn(`
-                border-2 
-                text-xl lg:text-[1.6vh]
+                border-2
                 border-green-500 
                 text-green-500 
-                rounded-md mb-2.5 
-                mr-2.5 
-                px-3 
+                rounded-md 
+                mb-[1vh]
+                mr-[1vh] 
+                px-4 
                 pt-1 
                 pb-1.5 
                 hover:bg-green-500 
@@ -85,10 +85,11 @@ export const Categories = ({
                                 className={cn(`
                                     border-2 
                                     border-green-500 
-                                    rounded-md mb-2.5 
-                                    mr-2.5 
-                                    text-xl lg:text-[1.6vh]
-                                    px-3 
+                                    rounded-md
+                                    mb-[1vh]
+                                    mr-[1vh] 
+                                    text-standard
+                                    px-4
                                     pt-1 
                                     pb-1.5 
                         `, item.key === selectedCategory ? "bg-green-500 text-black hover:bg-green-500 hover:text-black" : "text-green-500 hover:bg-green-500 hover:text-black")}>
@@ -97,20 +98,33 @@ export const Categories = ({
                             </button>     
                 ))}
                                 <button 
-                    onClick={() => scrollToElement("newsletter")} className={cn(`text-green-500 bg-transparent text-xl lg:text-[1.6vh] border-b-1 mx-1 mb-2 border-b border-green-500 hover:text-black hover:border-black`)}>{t("subscribeForUpdates")}</button>            
-                    <a href="#newsletter" className="w-10 h-10 relative float-right mr-[-1rem]">
+                    onClick={() => scrollToElement("newsletter")} className="text-green-500 border-b-1 mx-1 mb-2 border-b border-green-500 hover:text-black hover:border-black">{t("subscribeForUpdates")}</button>            
+                    <button className="w-10 h-10 relative float-right mr-[-1rem]" id="scrollToBottom" onClick={() => scrollToElement("footer")}>
                         <Image alt={t('scrollToBottom')} src={arrowImg} className="w-full" ></Image>
-                    </a>
+                    </button>
                 </div>
-                <div className="flex flex-row flex-wrap gap-4 lg:hidden w-full ">
-                    <select id="categories-dropdown" value={selectedCategory || ""} onChange={onSelectChange} className="bg-transparent text-xl lg:text-[1.6vh] border-green-500 hover:bg-gray-500 rounded-md border-2 px-3 py-2 text-green-500">
+                <div className="flex flex-row flex-wrap gap-6 lg:hidden w-full ">
+                    <select 
+                        id="categories-dropdown" 
+                        value={selectedCategory || ""} 
+                        onChange={onSelectChange} 
+                        className="text-standard-2x flex-grow cursor-pointer appearance-none bg-transparent border-green-500 hover:bg-gray-500 rounded-md border-2 px-3 py-2 text-green-500 focus-visible:outline-green-500 focus-visible:bg-gray-500"
+                        style={{ 
+                            backgroundPosition: '98% center',
+                            backgroundRepeat: "no-repeat",
+                        backgroundImage: `url(${arrowImg.src})`
+                        }}
+                    >
                     <option value="">{t("viewAll")}</option>
                         {data.map((item) => (
                             <option value={item.key} key={item.key}>{item.name}</option>
                         ))}
                     </select>
                     <button 
-                    onClick={() => scrollToElement("newsletter")} className={cn(`text-green-500 bg-transparent text-xl lg:text-[1.6vh] border-b-1 mx-1 mb-2 border-b border-green-500 mt-2 hover:text-black hover:border-black`)}>{t("subscribeForUpdates")}</button>
+                    onClick={() => scrollToElement("newsletter")} className="bg-transparent text-standard-2x text-green-500 border-b-1 mx-1 mb-2 border-b border-green-500 mt-2 hover:text-black hover:border-black">{t("subscribeForUpdates")}</button>
+                    <button className="w-10 h-10 relative float-right mt-1" id="scrollToBottom" onClick={() => scrollToElement("footer")}>
+                        <Image alt={t('scrollToBottom')} src={arrowImg} className="w-full" ></Image>
+                    </button>
                 </div>
             </div>
     )

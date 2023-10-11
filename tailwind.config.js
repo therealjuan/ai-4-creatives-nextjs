@@ -23,9 +23,9 @@ module.exports = {
         '10': '10px'
       },
       fontSize: {
-        '8xl': '5.5rem',
-        '2xl': '1.35rem',
-        'xl': '1.2rem'
+        '8xl': '4.5rem',
+        '2xl': '1.2rem',
+        'xl': '1rem'
       },
       colors: {
         black: '#111419',

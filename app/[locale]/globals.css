@@ -3,7 +3,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
+.text-standard {
+  @apply text-xl;
+}
+
+.text-hero {
+  @apply text-8xl;
+}
+
+.text-standard-2x {
+  @apply text-2xl;
+}
+
+.text-standard-3x {
+  @apply text-3xl;
+}
+
+
+@screen lg {
+  .text-standard {
+    @apply text-[1.8vh];
+  }
+
+  .text-hero {
+    @apply text-[12vh];
+  }
+
+  .text-standard-2x {
+    @apply lg:text-[2vh];
+  }   
+}
 @font-face {
   font-family:"cy";
   src:url("https://use.typekit.net/af/940fef/00000000000000007735cab8/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"),url("https://use.typekit.net/af/940fef/00000000000000007735cab8/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"),url("https://use.typekit.net/af/940fef/00000000000000007735cab8/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
@@ -163,6 +193,9 @@ h1, h2, h3, .Typewriter__cursor {
 	}
 }
 
+* {
+  outline-color: #59ff03;
+}
 
 #stickerise[data-sticker-text]::before {
   content: attr(data-sticker-text);
@@ -282,26 +315,14 @@ h1#feedbackfin__title {
   position: unset !important;
 }
 
-.home-card {
-  aspect-ratio: 16/9;
-}
-
+@media (min-width: 800px) {
 html[lang=es] h1 {
   font-size: 10vh;
 }
-
-@media (max-height: 800px) {
-
-  .text-8xl {
-    font-size: 5.5rem !important;
-  }
-
-  .text-2xl {
-    font-size: 1.35rem !important;
-  }
-
-  .text-xl {
-    font-size: 1.2rem !important;
-  }
-
 }
+
+@media (max-width: 799px) {
+  html[lang=es] h1 {
+    font-size: 3.35rem;
+  }
+  }

@@ -32,14 +32,19 @@ export const HomeCard = ({
     if (!data) return null;
 
     return (
-            <Card className="flex flex-row col-span-2 bg-purple-500 rounded-3xl border-10 border-white overflow-hidden">
-                <div className="max-w-xs">
-                    <img src={data.image} alt="John Cleese" className="h-full object-cover home-card" width="680" height="480"></img>
+            <Card className="flex flex-row col-span-2 bg-purple-500 rounded-3xl border-10 border-white overflow-hidden min-h-[16rem]">
+                <div className="w-full lg:w-1/2" 
+                    style={{ 
+                        backgroundImage: `url(${data.image})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center'
+                    }}>
+                    {/* <img src={data.image} alt="John Cleese" className="block md:hidden w-full object-cover home-card lg:aspect-video" width="680" height="480"></img> */}
                 </div>
-                <div className="flex flex-col gap-8 p-6 justify-between">
-                    { (locale === 'en') && <p className="text-xl lg:text-[1.6vh]">{data.description}</p>}
-                    { (locale === 'es') && <p className="text-xl lg:text-[1.6vh]">{data.descriptionEs}</p>}
-                    <div className="w-full flex justify-between text-xl lg:text-[1.6vh]">
+                <div className="w-full lg:w-1/2 flex flex-col px-6 py-4 gap-8 justify-between">
+                    { (locale === 'en') && <p className="text-standard">{data.description}</p>}
+                    { (locale === 'es') && <p className="text-standard">{data.descriptionEs}</p>}
+                    <div className="w-full flex justify-between text-standard">
                         <p><a href={data.source} target="_blank" className="border-b border-black hover:border-green-500 hover:text-green-500">{t(`${callToAction}`)}</a></p>
                         <p>{t(`${cardType}`)}</p>
                     </div>
