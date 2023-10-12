@@ -25,11 +25,11 @@ const SubmitToolPage = () => {
             <div className="grid grid-cols-8 gap-12 mb-0">
                 <div className="col-span-8 text-standard leading-8 lg:col-span-4">
                     <h1 className="mb-0 font-black tracking-tight pb-4 text-hero dark:text-white w-full leading-tight" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px` }}>{t("headline")}</h1>
-                    <p className="text-xl text-standard mb-2">{t.rich("p1")}</p>
-                    <p className="text-xl text-standard mb-20">{t.rich("p2")}</p>
+                    <p className="text-standard-2x mb-0">{t.rich("p1")}</p>
+                    <p className="text-standard-2x mb-20">{t.rich("p2")}</p>
                     <h2 className="font-black text-4xl leading-tight mb-6" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`}}>{t("headline2")}</h2>
-                    <p className="mb-6">{t("p3")}</p>
-                    <h2 className="font-black text-4xl leading-tight mb-6" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`}}>{t("thank")}</h2>
+                    <p className="text-2xl mb-2">{t("p3")}</p>
+                    <p className="py-4 lg:pt-2 text-standard-3x font-bold">{t("thank")}</p>
                 </div>
                 <div className='col-span-8 h-full rounded-lg overflow-hidden lg:col-span-4 md:pt-[3rem]'>
                   <Iframe 

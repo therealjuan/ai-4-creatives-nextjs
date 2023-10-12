@@ -25,7 +25,7 @@ export const Footer = () => {
                 <div className="flex flex-col w-50 text-standard max-lg:text-2xl mx-auto gap-4 w-full">
                     <Link href="/submit" className="hover:text-white">{t("submit")}</Link>
                     <Link href="https://twitter.com/ai_forcreatives" target="_blank" className="hover:text-white">{t("followUs")}</Link>
-                    <Link href="mailto:hello@aiforcreativ.es" className="hover:text-white">{t("contact")}</Link>
+                    <a href="mailto:hello@aiforcreativ.es" className="hover:text-white">{t("contact")}</a>
                 </div>
                 </div>
             </div>

@@ -58,7 +58,7 @@ export const Header = ({ follow, subscribe, contact, submit, locale }: HeaderPro
                 <ul className={`text-standard max-lg:text-3xl max-lg:block flex max-lg:absolute z-5 right-0 items-center max-lg:bg-black max-lg:text-white w-auto gap-6 pl-7 pt-2 pb-4 top-6 
                             max-lg:left-0 max-lg:top-0 max-lg:pt-20 max-lg:h-full max-lg:pl-8 min-lg:py-0 ${isMenuOpen ? 'max-lg:top-0' : 'max-lg:top-[-100%]'}`}>
                     <li className="py-3 max-lg:py-4"><Link className="hover:text-green-500" href="https://twitter.com/ai_forcreatives" target="_blank">{follow}</Link></li>
-                    <li className="py-3 max-lg:py-4"><Link className="hover:text-green-500" href="mailto:hello@aiforcreativ.es">{contact}</Link></li>
+                    <li className="py-3 max-lg:py-4"><a className="hover:text-green-500" href="mailto:hello@aiforcreativ.es">{contact}</a></li>
                     <li className="py-3 max-lg:py-4"><Link className="hover:text-green-500" href="/submit">{submit}</Link></li>
                     { locale == 'en' && ( <li className="py-3 max-lg:py-4"><Link className="hover:text-green-500" href="/" locale="es">ES</Link></li> ) }
                     { locale == 'es' && ( <li className="py-3 max-lg:py-4"><Link className="hover:text-green-500" href="/" locale="en">EN</Link></li> ) }
