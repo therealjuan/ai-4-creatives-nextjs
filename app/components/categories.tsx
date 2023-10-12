@@ -120,7 +120,7 @@ export const Categories = ({
                             <option value={item.key} key={item.key}>{item.name}</option>
                         ))}
                     </select>
-                    <div className="flex flex-row gap-2 w-full bg-red-500 justify-between">
+                    <div className="flex flex-row gap-2 w-full justify-between">
                     <button 
                     onClick={() => scrollToElement("newsletter")} className="bg-transparent text-standard-2x text-green-500 border-b-1 mx-1 mb-2 border-b border-green-500 mt-2 hover:text-black hover:border-black">{t("subscribeForUpdates")}</button>
                     <button className="w-10 h-10 relative float-right mt-1" id="scrollToBottom" onClick={() => scrollToElement("footer")}>
