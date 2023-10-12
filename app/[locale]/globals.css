@@ -23,7 +23,7 @@
 
 @screen lg {
   .text-standard {
-    @apply text-[1.8vh];
+    @apply text-[1.9vh];
   }
 
   .text-hero {
@@ -31,7 +31,7 @@
   }
 
   .text-standard-2x {
-    @apply lg:text-[2vh];
+    @apply lg:text-[1.9vh];
   }   
 }
 @font-face {

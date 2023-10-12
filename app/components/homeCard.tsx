@@ -32,7 +32,7 @@ export const HomeCard = ({
     if (!data) return null;
 
     return (
-            <Card className="flex flex-row col-span-2 bg-purple-500 rounded-3xl border-10 border-white overflow-hidden min-h-[16rem]">
+            <Card className="flex flex-row col-span-2 bg-purple-500 rounded-3xl border-10 border-white overflow-hidden min-h-[21vh] max-lg:min-h-[30vh]">
                 <div className="w-full lg:w-1/2" 
                     style={{ 
                         backgroundImage: `url(${data.image})`,

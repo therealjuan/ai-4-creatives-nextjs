@@ -26,8 +26,8 @@ export const Hero  = ({ numberOfTools }: HeroProps) => {
 
 
     return (
-        <div className="pb-8 lg:pb-10">
-            <h1 className="mb-0 lg:mb-8 font-black tracking-tight leading-none text-hero dark:text-white w-full max-w-[80%] max-lg:max-w-full pb-6"
+        <div className="pb-8 lg:pb-8">
+            <h1 className="mb-0 lg:mb-4 font-black tracking-tight leading-none text-hero dark:text-white w-full max-w-[80%] max-lg:max-w-full pb-6"
                 style={{
                     backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`,
                 }}>{t("hero.dope")}<br/>{numberOfTools} {t("hero.creatives")}</h1>
