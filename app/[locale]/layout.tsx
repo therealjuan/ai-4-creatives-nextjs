@@ -15,9 +15,11 @@ import {NextIntlClientProvider} from 'next-intl';
 import {createTranslator} from 'next-intl';
 
 
+
 const locales = ['en', 'es'];
 
 export async function generateMetadata({ params: {locale}}: { params: { locale: string; }}):Promise<Metadata> {
+
 
   const messages = (await import(`../../messages/${locale}.json`)).default;
 

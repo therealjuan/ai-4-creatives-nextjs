@@ -35,14 +35,14 @@ const PolicyOfCookiesPage = () => {
                     <p className="text-standard-2x mb-2">{t("lastUpdated-1")}</p>
                     <p className="text-standard-2x mb-6">{t("lastUpdated-2")}</p>
                     <h2 className="font-black text-4xl leading-tight mb-6" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`}}>{t("h2-1")}</h2>
-                    <p className="mb-6 text-standard-2xl">{t("p1")}</p>
-                    <p className="mb-6 text-standard-2xl">{t("p2")}</p>
+                    <p className="mb-6 text-standard-2x">{t("p1")}</p>
+                    <p className="mb-6 text-standard-2x">{t("p2")}</p>
                     <h2 className="font-black text-4xl leading-tight mb-6" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`}}>{t("h2-2")}</h2>
-                    <p className="mb-6 text-standard-2xl">{t("p3")}</p>
-                    <p className="mb-6 text-standard-2xl">{t("p4")}</p>
+                    <p className="mb-6 text-standard-2x">{t("p3")}</p>
+                    <p className="mb-6 text-standard-2x">{t("p4")}</p>
                     <h2 className="font-black text-4xl leading-tight mb-6" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`}}>{t("h2-3")}</h2>
                     <h4 className="font-bold text-standard-2x leading-tight mb-4">{t("h4-1")}</h4>
-                    <Table className="mb-8 text-standard-2xl">
+                    <Table className="mb-8 text-standard-2x">
                         <TableHeader>
                             <TableRow>
                                 <TableHead className="font-bold">{t("tableHead-1")}</TableHead>
@@ -64,7 +64,7 @@ const PolicyOfCookiesPage = () => {
                         </TableBody>
                     </Table>
                     <h4 className="font-bold text-standard-2x leading-tight mb-4">Analytics</h4>
-                    <Table className="mb-8 text-standard-2xl">
+                    <Table className="mb-8 text-standard-2x">
                         <TableHeader>
                             <TableRow>
                                 <TableHead className="font-bold">{t("tableHead-1")}</TableHead>
@@ -101,14 +101,14 @@ const PolicyOfCookiesPage = () => {
                         </TableBody>
                     </Table>
                     <h4 className="font-bold text-standard-2x leading-tight mb-4 text-black">{t("h4-2")}</h4>
-                    <p className="mb-6 text-standard-2xl">{t("p5")}</p>
-                    <p className="mb-6 text-standard-2xl">{t("p6")}</p>
-                    <p className="mb-6 text-standard-2xl"><a className="border-b-2 border-black hover:border-green-500 hover:text-green-500" href="https://support.google.com/accounts/answer/32050" target="_blank">Chrome</a></p>
-                    <p className="mb-6 text-standard-2xl"><a className="border-b-2 border-black hover:border-green-500 hover:text-green-500" href="https://support.apple.com/en-in/guide/safari/sfri11471/mac" target="_blank">Safari</a></p>
-                    <p className="mb-6 text-standard-2xl"><a className="border-b-2 border-black hover:border-green-500 hover:text-green-500" href="https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox?redirectslug=delete-cookies-remove-info-websites-stored&redirectlocale=en-US" target="_blank">Firefox</a></p>
-                    <p className="mb-6 text-standard-2xl"><a className="border-b-2 border-black hover:border-green-500 hover:text-green-500" href="https://support.microsoft.com/en-us/topic/how-to-delete-cookie-files-in-internet-explorer-bca9446f-d873-78de-77ba-d42645fa52fc" target="_blank">Internet Explorer</a></p>
-                    <p className="mb-6 text-standard-2xl">{t("p7")}</p>
-                    <p className="mb-6 text-standard-2xl">{t("p8")}</p>
+                    <p className="mb-6 text-standard-2x">{t("p5")}</p>
+                    <p className="mb-6 text-standard-2x">{t("p6")}</p>
+                    <p className="mb-6 text-standard-2x"><a className="border-b-2 border-black hover:border-green-500 hover:text-green-500" href="https://support.google.com/accounts/answer/32050" target="_blank">Chrome</a></p>
+                    <p className="mb-6 text-standard-2x"><a className="border-b-2 border-black hover:border-green-500 hover:text-green-500" href="https://support.apple.com/en-in/guide/safari/sfri11471/mac" target="_blank">Safari</a></p>
+                    <p className="mb-6 text-standard-2x"><a className="border-b-2 border-black hover:border-green-500 hover:text-green-500" href="https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox?redirectslug=delete-cookies-remove-info-websites-stored&redirectlocale=en-US" target="_blank">Firefox</a></p>
+                    <p className="mb-6 text-standard-2x"><a className="border-b-2 border-black hover:border-green-500 hover:text-green-500" href="https://support.microsoft.com/en-us/topic/how-to-delete-cookie-files-in-internet-explorer-bca9446f-d873-78de-77ba-d42645fa52fc" target="_blank">Internet Explorer</a></p>
+                    <p className="mb-6 text-standard-2x">{t("p7")}</p>
+                    <p className="mb-6 text-standard-2x">{t("p8")}</p>
                 </div>
             </div>
         </div>

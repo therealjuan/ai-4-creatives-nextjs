@@ -3,15 +3,16 @@
 import { ONUTSticker } from "../components/onutSticker";
 import { ToolSticker } from "../components/toolSticker";
 import { VideoCircleSticker } from "../components/videoCircleSticker";
-
-import Image from 'next/image'
+import { usePathname } from "next/navigation";
 
 export const Stickers = () => {
+    const path = usePathname();
+
     return (
         <div>
             <ToolSticker />
             <ONUTSticker />
-            <VideoCircleSticker />
+            { path !== "/submit" && ( <VideoCircleSticker />) }
         </div>
     )
 }

@@ -35,7 +35,7 @@ export default function FlipButton(props: FlipButtonProps) {
         <button className={`flippable-button h-auto cursor-pointer text-standard text-white hover:text-black ${flipped ? 'flipped' : ''} bg-black`}>
             <div className="front text-standard flex items-center py-2.5 pl-4 pr-20 justify-start hover:bg-green-500 " onClick={handleClick}>
                 {t('shareLove')}
-                <Image src={shareLoveImg} className='absolute md:mt-[-4px] lg:mt-[2px]' loading="lazy" alt={t('shareLove')} />
+                <Image src={shareLoveImg} className='absolute lg:mt-[2px] max-lg:mt-[-4px]' loading="lazy" alt={t('shareLove')} />
             </div>
             <div className="back absolute top-0 left-0 w-full h-full flex items-center justify-between p-4 px-4 m-0" onClick={handleClick}>
                 <a onClick={copyLink} className="tool-link link cursor-pointer" title={t('copyLink')}>

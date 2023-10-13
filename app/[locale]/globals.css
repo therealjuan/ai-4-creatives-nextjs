@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 .text-standard {
-  @apply text-xl;
+  @apply text-xl leading-normal;
 }
 
 .text-hero {
@@ -13,17 +13,17 @@
 }
 
 .text-standard-2x {
-  @apply text-2xl;
+  @apply text-2xl leading-relaxed;
 }
 
 .text-standard-3x {
-  @apply text-3xl;
+  @apply text-3xl leading-relaxed;
 }
 
 
 @screen lg {
   .text-standard {
-    @apply text-[1.9vh];
+    @apply text-[1.9vh] leading-normal;
   }
 
   .text-hero {
