@@ -12,7 +12,8 @@
             "follow": "@Follow us",
             "contact": "Contact",
             "submit": "Submit tool",
-            "subscribe": "Subscribe"
+            "subscribe": "Subscribe",
+            "extra": ""
         },
         "categories": {
             "all": "All",

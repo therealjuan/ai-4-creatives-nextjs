@@ -13,9 +13,10 @@ interface HeaderProps {
     contact: string;
     submit: string;
     locale: string;
+    extra: string;
   }  
 
-export const Header = ({ follow, subscribe, contact, submit, locale }: HeaderProps) => {
+export const Header = ({ follow, subscribe, contact, submit, extra, locale }: HeaderProps) => {
         const [isMenuOpen, setIsMenuOpen] = useState(false);
 
         // Function to handle scrolling to a specific element
@@ -59,7 +60,7 @@ export const Header = ({ follow, subscribe, contact, submit, locale }: HeaderPro
                             max-lg:left-0 max-lg:top-0 max-lg:pt-24 max-lg:h-full max-lg:pl-8 min-lg:py-0 ${isMenuOpen ? 'max-lg:top-0' : 'max-lg:top-[-100%]'}`}>
                     <li className="py-3 max-lg:py-4"><Link className="hover:text-green-500" href="https://twitter.com/ai_forcreatives" target="_blank">{follow}</Link></li>
                     <li className="py-3 max-lg:py-4"><a className="hover:text-green-500" href="mailto:hello@aiforcreativ.es">{contact}</a></li>
-                    <li className="py-3 max-lg:py-4"><Link className="hover:text-green-500" href="/submit">{submit}</Link></li>
+                    <li className="py-3 max-lg:py-4"><Link className="hover:text-green-500" href="/submit">{submit}{extra}</Link></li>
                     { locale == 'en' && ( <li className="py-3 max-lg:py-4"><Link className="hover:text-green-500" href="/" locale="es">ES</Link></li> ) }
                     { locale == 'es' && ( <li className="py-3 max-lg:py-4"><Link className="hover:text-green-500" href="/" locale="en">EN</Link></li> ) }
                     <li className="py-3 max-lg:py-4">
