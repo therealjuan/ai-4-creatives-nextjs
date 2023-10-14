@@ -1,15 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 
-const plugin = require('tailwindcss/plugin');
+const plugin = require("tailwindcss/plugin");
 
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   theme: {
     container: {
       center: true,
@@ -20,27 +20,28 @@ module.exports = {
     },
     extend: {
       borderWidth: {
-        '10': '10px'
+        10: "10px",
       },
       fontSize: {
-        '8xl': '4.5rem',
-        '2xl': '1.2rem',
-        'xl': '1rem'
+        "8xl": "4.5rem",
+        "6xl": "3.5rem",
+        "2xl": "1.2rem",
+        xl: "1rem",
       },
       colors: {
-        black: '#111419',
+        black: "#111419",
         green: {
-          '500': '#59ff03',
+          500: "#59ff03",
         },
         gray: {
-          '500': 'rgba(180, 193, 204, .4)'
+          500: "rgba(180, 193, 204, .4)",
         },
         purple: {
-          '500': '#93aaff',
-          '900': '#6a70fd',
+          500: "#93aaff",
+          900: "#6a70fd",
         },
         lineHeight: {
-          'extra': '3.7rem',
+          extra: "3.7rem",
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -99,10 +100,10 @@ module.exports = {
   },
   plugins: [
     require("tailwindcss-animate"),
-    plugin(function({ addBase }) {
-        addBase({
-            'html': { fontSize: "16px" },
-        })
-      })
-    ]
-}
+    plugin(function ({ addBase }) {
+      addBase({
+        html: { fontSize: "16px" },
+      });
+    }),
+  ],
+};
