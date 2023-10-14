@@ -85,7 +85,7 @@ export const ToolList = ({
                         </a>
                     </div>
                     <div className="lg:w-1/5 w-full relative cursor-pointer table-row-image">
-                        <a href={item.link} className='flex gap-2 image-container' target="_blank">
+                        <a href={item.link} className='flex gap-2 image-container aspect-video' target="_blank">
                             <Image
                                 src={`https://d3jk7oka2i5czj.cloudfront.net/images/${item.id}.png`} 
                                 alt={`${item.name}`} 
