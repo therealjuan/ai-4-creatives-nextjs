@@ -89,10 +89,11 @@ export const ToolList = ({
                             <Image
                                 src={`https://d3jk7oka2i5czj.cloudfront.net/images/${item.id}.png`} 
                                 alt={`${item.name}`} 
-                                fill
+                                width="700"
+                                height="475"
                                 priority={true}
                                 placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
-                                className='w-full h-auto scale-100 lg:hover:scale-105' />
+                                className='w-full scale-100 lg:hover:scale-105' />
                         </a>
                     </div>
                     <div className="lg:w-1/2 flex-1">
