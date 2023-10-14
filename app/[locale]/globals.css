@@ -264,9 +264,6 @@ h1, h2, h3, .Typewriter__cursor {
 }
 
 .flippable-button .front img {
-  right: .3rem;
-  top: -.7rem;
-  width: 3.5rem;
   filter: grayscale(1) brightness(100);
 }
 

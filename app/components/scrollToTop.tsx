@@ -32,7 +32,7 @@ export const ScrollToTop = () => {
             translateYValue = Math.min(Math.max(translateYValue, 0), 200);
 
             // Update the translateY position
-            gsap.to(btnRef.current, { y: `${translateYValue}%`, duration: 0.3 });
+            gsap.to(btnRef.current, { y: `${translateYValue}%` });
         };
   
       window.addEventListener('scroll', handleScroll);
