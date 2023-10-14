@@ -283,35 +283,6 @@ h1, h2, h3, .Typewriter__cursor {
   cursor: grab;
 }
 
-#feedback-button {
-    position: fixed;
-    z-index: 9999;
-    padding: 1rem;
-    width: 4rem;
-    height: 4rem;
-    top: 50%;
-    margin-top: -1rem;
-    overflow: hidden;
-    background: #111419;
-    cursor: pointer;
-    border-radius: 50%;
-    right: 1rem;
-}
-
-#feedback-button img {
-    filter: brightness(1) invert(1);
-    position: relative;
-    right: 0.1rem;
-}
-
-h1#feedbackfin__title {
-  color: white !important;
-}
-
-.image-container img {
-  position: unset !important;
-}
-
 @media (min-width: 800px) {
 html[lang=es] h1 {
   font-size: 10vh;
