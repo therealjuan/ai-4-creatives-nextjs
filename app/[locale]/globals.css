@@ -283,6 +283,14 @@ h1, h2, h3, .Typewriter__cursor {
   cursor: grab;
 }
 
+.hero-text {
+  max-width: 55ch;
+}
+
+html[lang=es] .hero-text {
+  max-width: 70ch;
+}
+
 @media (min-width: 800px) {
 html[lang=es] h1 {
   font-size: 10vh;
