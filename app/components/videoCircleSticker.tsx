@@ -19,7 +19,7 @@ export const VideoCircleSticker = () => {
   return (
     <div>
       <div className="draggable">
-        <div className="absolute top-64 right-24 z-1 bg-white rounded-full w-72 max-w-[18vw] border-white border-[6px] max-lg:hidden">
+        <div className="absolute top-[30vh] right-[6vw] z-1 bg-white rounded-full w-[16vw] h-[16vw] border-white border-[6px] max-lg:hidden">
           <Image
             src={QuoteImg}
             alt="ONUT"
@@ -31,7 +31,7 @@ export const VideoCircleSticker = () => {
             playsInline
             loop
             muted
-            className="absolute top-0 p-[1.3rem] rounded-full"
+            className="absolute top-0 left-0 m-[8.5%] w-[83%] h-[83%] rounded-full"
           />
         </div>
       </div>

@@ -8,9 +8,9 @@ export const ToolSticker = () => {
   return (
     <div>
       <div className="draggable">
-        <div className="absolute top-24 right-[24rem] z-1 rotate-[6deg] max-lg:hidden">
+        <div className="absolute top-[10.5vh] right-[12.5vw] z-1 rotate-[6deg] max-lg:hidden">
           <div
-            className="text-6xl leading-none text-purple-900 font-black"
+            className="text-[6vh] leading-none text-purple-900 font-[800]"
             id="stickerise"
             data-sticker-text="Palette.fm"
           >

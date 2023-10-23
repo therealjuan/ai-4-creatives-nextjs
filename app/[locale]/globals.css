@@ -23,15 +23,15 @@
 
 @screen lg {
   .text-standard {
-    @apply text-[1.7vh] leading-normal;
+    @apply text-[1.8vh] leading-normal;
   }
 
   .text-hero {
-    @apply text-[12vh];
+    @apply text-[12vh] leading-[1.05];
   }
 
   .text-standard-2x {
-    @apply lg:text-[1.7vh];
+    @apply lg:text-[1.8vh];
   }   
 }
 @font-face {
@@ -201,7 +201,7 @@ h1, h2, h3, .Typewriter__cursor {
   content: attr(data-sticker-text);
   z-index: -1;
   color: #fff;
-  -webkit-text-stroke: 1rem #fff;
+  -webkit-text-stroke: 0.26em #fff;
   position: absolute;
   white-space: nowrap;
   inset: 0;
@@ -212,7 +212,7 @@ h1, h2, h3, .Typewriter__cursor {
   position: absolute;
   z-index: -2;
   color: #fff;
-  -webkit-text-stroke: 1rem #0002;
+  -webkit-text-stroke: 0.25em #0002;
   inset: 0.0125em 0 0 0.0125em;
   white-space: nowrap;
   filter: blur(0.0025em);

@@ -74,7 +74,7 @@ export default function RootLayout({
               extra={t("header.extra")}
               locale={locale} 
             />
-            <div className='pt-2 lg:pt-6 pb-8 mx-auto flex flex-col'>
+            <div className='pt-2 lg:pt-[6vh] pb-8 mx-auto flex flex-col'>
                   {children}
             </div>
           </NextIntlClientProvider>

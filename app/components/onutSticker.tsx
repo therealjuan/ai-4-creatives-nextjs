@@ -7,8 +7,8 @@ export const ONUTSticker = () => {
   return (
     <div>
       <div className="draggable">
-        <div className="absolute top-32 max-w-[10vw] right-12 right-0 z-1 bg-white rounded-full w-36 border-white border-10 transition transition-transform duration-400 hover:rotate-20 hidden lg:block">
-          <Image src={ONUTLogo} alt="ONUT" className="w-full" />
+        <div className="absolute top-[17vh] w-[7.5vw] h-[7.5vw] right-[3.5vw] z-1 bg-white rounded-full border-white border- transition transition-transform duration-400 hover:rotate-[20deg] hidden lg:block">
+          <Image src={ONUTLogo} alt="ONUT" className="w-[85%] m-[7.5%]" />
         </div>
       </div>
     </div>
