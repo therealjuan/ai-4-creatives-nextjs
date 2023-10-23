@@ -33,7 +33,7 @@ export const Hero  = ({ numberOfTools }: HeroProps) => {
                 }}>{t("hero.dope")}<br/>{numberOfTools} {t("hero.creatives")}</h1>
             <div className="flex">
                 <ChickenSticker/>
-                <p className="text-standard hero-text lg:ml-4 text-gray-900">{t("hero.catalog")}</p>
+                <p className="hero-text text-standard lg:ml-4 text-gray-900">{t("hero.catalog")}</p>
             </div>
         </div>
     )

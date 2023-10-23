@@ -37,7 +37,7 @@ export const HomeCard = ({
           backgroundPosition: "center",
         }}
       ></div>
-      <div className="w-full lg:w-1/2 flex flex-col px-6 py-4 gap-8 justify-between">
+      <div className="w-full lg:w-1/2 flex flex-col px-6 pt-4 pb-6 gap-8 justify-between">
         {locale === "en" && <p className="text-standard">{data.description}</p>}
         {locale === "es" && (
           <p className="text-standard-2x">{data.descriptionEs}</p>

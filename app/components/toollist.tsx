@@ -97,8 +97,8 @@ export const ToolList = ({
                         </a>
                     </div>
                     <div className="lg:w-1/2 flex-1">
-                        { locale === 'en' && ( <p className='mb-2 text-standard'>{item.description}</p>)}
-                        { locale === 'es' && ( <p className='mb-2 text-standard'>{item.descriptionEs}</p>)}
+                        { locale === 'en' && ( <p className='mb-4 text-standard'>{item.description}</p>)}
+                        { locale === 'es' && ( <p className='mb-4 text-standard'>{item.descriptionEs}</p>)}
                         { item.sourceLink !== '' && ( <p className='text-standard mb-0 flex flex-col items-baseline gap-1 lg:block lg:gap-0'>{t('firstSeen')} <a href={item.sourceLink} className='text-standard' target="_blank"><span className='text-standard border-black border-b-[1.5px] border-black hover:text-green-500 hover:border-green-500'>{item.source}</span></a></p> ) }
                     </div>
                     <div className="relative flex flex-row gap-4 lg:flex-col items-center lg:items-start lg:gap-6 min-w-[20vw]">
