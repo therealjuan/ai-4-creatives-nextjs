@@ -30,7 +30,7 @@ export const Header = ({ follow, subscribe, contact, submit, extra, locale }: He
             }
         };
     return (
-        <div className="pl-8 pr-8 lg:px-8 py-6">
+        <div className="max-w-[95vw] mx-auto max-lg:py-6 lg:py-[2vw]">
             <div className="flex flex-wrap justify-between items-center z-9">
                 <div className="flex items-center w-[28%] z-[99] max-lg:w-[70%]">
                     <Link href="/" className='w-full'>

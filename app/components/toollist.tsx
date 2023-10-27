@@ -72,12 +72,12 @@ export const ToolList = ({
 
     return (
         <div>
-            <div className="flex flex-row flex-wrap px-8">
+            <div className="flex flex-row flex-wrap max-w-[95vw] mx-auto">
                 <ToolCounter total={filteredData.length} selectedCategory={filteredData[0].categoryName} /> 
             </div>
             {displayedData.map((item, index) => (
             <div className={`gap-2 py-2 transition-all ${index < displayedData.length - 1 ? 'border-b-[1px] border-gray-500' : ''}`} key={item.id}>
-                <div className="w-full px-8 gap-8 mx-auto py-6 lg:py-8 flex flex-col lg:flex-row">
+                <div className="w-full max-w-[95vw] mx-auto gap-8 mx-auto py-6 lg:py-8 flex flex-col lg:flex-row">
                     <div className="lg:w-1/5 flex flex-col justify-space-between self-stretch">
                         <a href={item.link} className='flex gap-2' target="_blank">
                             <span className="font-bold color-white text-3xl product-description-title px-[0.2rem] pb-[0.3rem] hover:text-green-500">{item.name}</span>

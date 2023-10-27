@@ -74,11 +74,11 @@ export default function RootLayout({
               extra={t("header.extra")}
               locale={locale} 
             />
-            <div className='pt-2 lg:pt-[6vh] pb-8 mx-auto flex flex-col'>
+            <div className='pt-2 lg:pt-[4vh] pb-8 mx-auto flex flex-col'>
                   {children}
             </div>
           </NextIntlClientProvider>
-          <div className="flex flex-col lg:flex-row px-8 pt-8 pb-20 gap-8">
+          <div className="flex flex-col lg:flex-row max-w-[95vw] mx-auto pt-8 pb-20 gap-8">
             <NewsletterForm 
               stay={t("newsletter.stay")} 
               toolbox={t("newsletter.toolbox")} 

@@ -59,7 +59,7 @@ export const Categories = ({
     };
 
     return (
-            <div className="text-standard px-8 mx-auto flex flex-row flex-wrap w-full sticky z-50 top-0 py-4 backdrop-blur" id="categories">
+            <div className="text-standard max-w-[95vw] mx-auto mx-auto flex flex-row flex-wrap w-full sticky z-50 top-0 py-4 backdrop-blur" id="categories">
                 <div className="lg:block hidden">
                 <button 
                     onClick={() => onClick(undefined)}
@@ -70,9 +70,10 @@ export const Categories = ({
                 rounded-md 
                 mb-[1vh]
                 mr-[1vh] 
-                px-4 
-                pt-1 
-                pb-1.5 
+                px-[1.25vh]
+                pt-[.3vh] 
+                pb-[.6vh] 
+                text-[1.5vh] 
                 hover:bg-green-500 
                 hover:border-green-500
                 hover:text-black
@@ -88,17 +89,17 @@ export const Categories = ({
                                     rounded-md
                                     mb-[1vh]
                                     mr-[1vh] 
-                                    text-standard
-                                    px-4
-                                    pt-1 
-                                    pb-1.5 
+                                    text-[1.5vh]
+                                    px-[1.25vh]
+                                    pt-[.3vh] 
+                                    pb-[.6vh] 
                         `, item.key === selectedCategory ? "bg-green-500 text-black hover:bg-green-500 hover:text-black" : "text-green-500 hover:bg-green-500 hover:text-black")}>
                             {locale === 'en' && item.name}
                             {locale === 'es' && item.nameEs}
                             </button>     
                 ))}
                                 <button 
-                    onClick={() => scrollToElement("newsletter")} className="text-green-500 border-b-1 mx-1 mb-2 border-b border-green-500 hover:text-black hover:border-black">{t("subscribeForUpdates")}</button>            
+                    onClick={() => scrollToElement("newsletter")} className="text-green-500 text-[1.5vh] border-b-1 mx-1 mb-2 border-b border-green-500 hover:text-black hover:border-black">{t("subscribeForUpdates")}</button>            
                     <button className="w-10 h-10 relative float-right mr-[-1rem]" id="scrollToBottom" onClick={() => scrollToElement("footer")}>
                         <Image alt={t('scrollToBottom')} src={arrowImg} className="w-full" ></Image>
                     </button>

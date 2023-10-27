@@ -21,7 +21,7 @@ const SubmitToolPage = () => {
 
 
     return ( 
-        <div className="px-8">
+        <div className="max-w-[95vw] mx-auto">
             <div className="grid grid-cols-8 gap-12 mb-0">
                 <div className="col-span-8 text-standard leading-8 lg:col-span-4">
                     <h1 className="mb-0 font-black tracking-tight pb-4 text-hero dark:text-white w-full leading-tight" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px` }}>{t("headline")}</h1>

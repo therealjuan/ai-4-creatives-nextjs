@@ -20,7 +20,7 @@ const PrivacyPage = () => {
 
 
     return ( 
-        <div className="px-8">
+        <div className="max-w-[95vw] mx-auto">
             <h1 className="mb-8 font-black tracking-tight leading-tight pb-6 text-hero dark:text-white w-full" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px` }}>{t("headline")}</h1>
             <div className="grid grid-cols-8 mb-0">
                 <div className="col-span-5 text-xl leading-8">

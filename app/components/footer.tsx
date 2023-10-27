@@ -9,8 +9,8 @@ export const Footer = () => {
     const t = useTranslations("Index.footer");
 
     return (
-        <footer className="bg-purple-900 py-8 lg:py-20 px-8 max-lg:py-24" id="footer">
-            <div className="flex flex-col lg:flex-row justify-between w-full gap-8 items-baseline lg:items-end">
+        <footer className="bg-purple-900 py-8 lg:py-20 max-lg:py-24" id="footer">
+            <div className="max-w-[95vw] mx-auto flex flex-col lg:flex-row justify-between w-full gap-8 items-baseline lg:items-end">
                 <div className="lg:w-1/2 h-full flex order-last lg:-order-1 items-end" >
                     <Link href="/" className='self-end'>
                         <Image src={FooterLogo} className="" alt="AI for Creatives"></Image>
