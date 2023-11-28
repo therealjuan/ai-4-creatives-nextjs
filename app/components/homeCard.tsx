@@ -30,7 +30,7 @@ export const HomeCard = ({
   return (
     <Card className="flex flex-row col-span-1 bg-purple-500 rounded-3xl border-[1vh] border-white overflow-hidden max-lg:min-h-[20vh]">
       <img className="max-lg:max-w-[50%] lg:max-w-[13vw] aspect-video object-cover" src={data.image} />
-        <div className=" flex flex-col px-6 pt-4 pb-6 gap-8 justify-between">
+        <div className=" flex flex-col px-[2vh] py-[1.5vh] gap-8 justify-between">
           <p className="text-[1.6vh] max-lg:text-[1.5vh]">
             {locale === "en" && (data.description)}
             {locale === "es" && (data.descriptionEs)}
