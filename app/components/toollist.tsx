@@ -76,11 +76,12 @@ export const ToolList = ({
                 <ToolCounter total={filteredData.length} selectedCategory={filteredData[0].categoryName} /> 
             </div>
             {displayedData.map((item, index) => (
-            <div className={`gap-2 py-2 transition-all ${index < displayedData.length - 1 ? 'border-b-[1px] border-gray-500' : ''}`} key={item.id}>
-                <div className="w-full max-w-[95vw] mx-auto gap-8 mx-auto py-6 lg:py-8 flex flex-col lg:flex-row">
+            <div className={`gap-2 transition-all ${index < displayedData.length - 1 ? 'border-b-[1px] border-gray-500' : ''}`} key={item.id}>
+                <div className="w-full max-w-[100vw] hover:bg-gray-500 transition-all">
+                  <div className="mx-[2.5vw] gap-8 py-[6vh] lg:py-8 flex flex-col lg:flex-row">  
                     <div className="lg:w-1/5 flex flex-col justify-space-between self-stretch">
                         <a href={item.link} className='flex gap-2' target="_blank">
-                            <span className="font-bold color-white text-3xl product-description-title px-[0.2rem] pb-[0.3rem] hover:text-green-500">{item.name}</span>
+                            <span className="font-bold color-white text-[3vh] leading-[3.75vh] product-description-title px-[0.2rem] pb-[0.3rem] hover:text-green-500">{item.name}</span>
                             <Image src={linkImage} alt="In a blink of an AI" className="w-5 pt-[5px]" />
                         </a>
                     </div>
@@ -120,6 +121,7 @@ export const ToolList = ({
                             lg:pb-2
                             '>{item.categoryName}</button>
                         <FlipButton toolName={item.name} url={item.link}></FlipButton>
+                    </div>
                     </div>
                 </div>
             </div>

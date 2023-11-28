@@ -29,7 +29,7 @@ const SubmitToolPage = () => {
                     <p className="text-standard-2x mb-20">{t.rich("p2")}</p>
                     <h2 className="font-black text-4xl leading-tight mb-6" style={{ backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`}}>{t("headline2")}</h2>
                     <p className="text-2xl mb-2">{t("p3")}</p>
-                    <p className="py-4 lg:pt-2 text-standard-3x font-bold">{t("thank")}</p>
+                    <p className="py-4 lg:pt-2 text-[2vh] font-bold">{t("thank")}</p>
                 </div>
                 <div className='col-span-8 h-full rounded-lg overflow-hidden lg:col-span-4 md:pt-[3rem]'>
                   <Iframe 
