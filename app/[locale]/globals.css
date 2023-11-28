@@ -27,7 +27,7 @@
   }
 
   .text-hero {
-    @apply text-[12vh] leading-[1.05];
+    @apply text-[12vh] leading-[1.04];
   }
 
   .text-standard-2x {
@@ -284,7 +284,7 @@ h1, h2, h3, .Typewriter__cursor {
 }
 
 .hero-text {
-  max-width: 55ch;
+  max-width: 50ch;
 }
 
 html[lang=es] .hero-text {

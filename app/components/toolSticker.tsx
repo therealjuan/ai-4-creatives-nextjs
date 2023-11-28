@@ -8,7 +8,7 @@ export const ToolSticker = () => {
   return (
     <div>
       <div className="draggable">
-        <div className="absolute top-[12vh] right-[15vw] z-1 rotate-[6deg] max-lg:hidden">
+        <div className="absolute top-[13vh] right-[15vw] z-1 rotate-[6deg] max-lg:hidden">
           <div
             className="text-[6vh] leading-none text-purple-900 font-[800]"
             id="stickerise"
@@ -16,7 +16,7 @@ export const ToolSticker = () => {
           >
             Palette.fm
           </div>
-          <span className="bg-white px-2 ml-[-4.2px]">
+          <span className="bg-white px-2 py-[0.2rem] ml-[0]">
             {t("lastToolAdded")}
           </span>
         </div>

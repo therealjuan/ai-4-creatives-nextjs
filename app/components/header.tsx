@@ -30,7 +30,7 @@ export const Header = ({ follow, subscribe, contact, submit, extra, locale }: He
             }
         };
     return (
-        <div className="max-w-[95vw] mx-auto max-lg:py-6 lg:py-[2vw]">
+        <div className="max-w-[95vw] mx-auto max-lg:py-6 lg:py-[4vh]">
             <div className="flex flex-wrap justify-between items-center z-9">
                 <div className="flex items-center w-[28%] z-[99] max-lg:w-[70%]">
                     <Link href="/" className='w-full'>
@@ -56,7 +56,7 @@ export const Header = ({ follow, subscribe, contact, submit, extra, locale }: He
                         </Button>
                     )}
                 </div>
-                <ul className={`text-standard max-lg:text-2xl max-lg:block flex max-lg:absolute z-5 right-0 items-center max-lg:bg-black max-lg:text-white w-auto gap-6 pl-7 pt-2 pb-4 top-6 
+                <ul className={`text-standard max-lg:text-2xl max-lg:block flex max-lg:absolute z-5 right-0 items-center max-lg:bg-black max-lg:text-white w-auto gap-6 pl-7 top-6 
                             max-lg:left-0 max-lg:top-0 max-lg:pt-24 max-lg:h-full max-lg:pl-8 min-lg:py-0 ${isMenuOpen ? 'max-lg:top-0' : 'max-lg:top-[-100%]'}`}>
                     <li className="py-3 max-lg:py-4"><Link className="hover:text-green-500" href="https://twitter.com/ai_forcreatives" target="_blank">{follow}</Link></li>
                     <li className="py-3 max-lg:py-4"><a className="hover:text-green-500" href="mailto:hello@aiforcreativ.es">{contact}</a></li>
