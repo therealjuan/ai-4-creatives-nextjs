@@ -104,12 +104,12 @@ export const Categories = ({
                         <Image alt={t('scrollToBottom')} src={arrowImg} className="w-full" ></Image>
                     </button>
                 </div>
-                <div className="flex flex-row flex-wrap gap-6 lg:hidden w-full ">
+                <div className="flex flex-column gap-6 lg:hidden w-full ">
                     <select 
                         id="categories-dropdown" 
                         value={selectedCategory || ""} 
                         onChange={onSelectChange} 
-                        className="text-standard-2x flex-grow cursor-pointer appearance-none bg-transparent border-green-500 hover:bg-gray-500 rounded-md border-2 px-3 py-2 text-green-500 focus-visible:outline-green-500 focus-visible:bg-gray-500"
+                        className="text-standard-2x flex-grow cursor-pointer appearance-none bg-transparent border-green-500 hover:bg-gray-500 rounded-md border-2 pl-3 pr-12 py-2 text-green-500 focus-visible:outline-green-500 focus-visible:bg-gray-500"
                         style={{ 
                             backgroundPosition: '98% center',
                             backgroundRepeat: "no-repeat",

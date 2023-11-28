@@ -78,7 +78,7 @@ export const ToolList = ({
             {displayedData.map((item, index) => (
             <div className={`gap-2 transition-all ${index < displayedData.length - 1 ? 'border-b-[1px] border-gray-500' : ''}`} key={item.id}>
                 <div className="w-full max-w-[100vw] hover:bg-gray-500 transition-all">
-                  <div className="mx-[2.5vw] gap-8 py-[6vh] lg:py-8 flex flex-col lg:flex-row">  
+                  <div className="mx-[2.5vw] gap-8 py-[6vh] lg:py-[6vh] flex flex-col lg:flex-row">  
                     <div className="lg:w-1/5 flex flex-col justify-space-between self-stretch">
                         <a href={item.link} className='flex gap-2' target="_blank">
                             <span className="font-bold color-white text-[3vh] leading-[3.75vh] product-description-title px-[0.2rem] pb-[0.3rem] hover:text-green-500">{item.name}</span>
