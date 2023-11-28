@@ -26,7 +26,7 @@ export const Hero  = ({ numberOfTools }: HeroProps) => {
 
 
     return (
-        <div className="pb-8 lg:pb-[8vh]">
+        <div className="">
             <h1 className="mb-0 lg:mb-4 font-black tracking-tight leading-none text-hero dark:text-white w-full max-w-[80%] max-lg:max-w-full pb-6"
                 style={{
                     backgroundPosition: `${mousePosition.x}px ${mousePosition.y}px`,
