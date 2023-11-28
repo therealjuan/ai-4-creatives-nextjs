@@ -30,8 +30,8 @@ export const Header = ({ follow, subscribe, contact, submit, extra, locale }: He
             }
         };
     return (
-        <div className="max-w-[95vw] mx-auto max-lg:py-6 lg:py-[4vh]">
-            <div className="flex flex-wrap justify-between items-center z-9">
+        <div className="w-[100vw] mx-auto absolute py-[4vh]">
+            <div className="flex flex-wrap justify-between items-center z-9 max-w-[95vw] w-full relative mx-auto">
                 <div className="flex items-center w-[28%] z-[99] max-lg:w-[70%]">
                     <Link href="/" className='w-full'>
                         <Image src={logoAIforCreatives} className="w-full" alt="AI for Creatives"></Image>
