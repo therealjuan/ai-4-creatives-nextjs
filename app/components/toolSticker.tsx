@@ -8,7 +8,7 @@ export const ToolSticker = () => {
   return (
     <div>
       <div className="draggable">
-        <div className="absolute top-[13vh] right-[15vw] z-1 rotate-[6deg] max-lg:hidden">
+        <div className="absolute top-[13vh] right-[12vw] z-1 rotate-[6deg] max-lg:hidden">
           <div
             className="text-[6vh] leading-none text-purple-900 font-[800]"
             id="stickerise"

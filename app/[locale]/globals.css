@@ -299,6 +299,6 @@ html[lang=es] h1 {
 
 @media (max-width: 799px) {
   html[lang=es] h1 {
-    font-size: 3.35rem;
+    font-size: 6vh;
   }
   }

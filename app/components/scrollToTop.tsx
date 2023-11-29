@@ -45,7 +45,7 @@ export const ScrollToTop = () => {
     
     return (
         <div>
-            <a id="scrollToTop" ref={btnRef} href="#top" className="w-[3.5vh] h-[3.5vh] fixed bottom-[3vh] right-[1.8vw] z-[999] max-lg:right-8 max-lg:bottom-6 float-right mr-0 transition-all duration-500 translate-y-[200%]">
+            <a id="scrollToTop" ref={btnRef} href="#top" className="w-[3.5vh] h-[3.5vh] fixed bottom-[3vh] right-[2.5vw] z-[999] max-lg:right-8 max-lg:bottom-6 float-right mr-0 transition-all duration-500 translate-y-[200%] mr-[-1rem] max-lg:w-[34px]">
                 <Image alt={t('scrollToTop')} src={arrowImg} className='rotate-180 w-full'></Image>
             </a>
         </div>
