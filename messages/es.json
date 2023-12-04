@@ -47,12 +47,12 @@
             "terms": "Términos y Condiciones",
             "privacy": "Política de Privacidad",
             "cookie": "Política de Cookies",
-            "submit": "Sugiere una herramienta",
+            "submit": "Recomienda una herramienta",
             "followUs": "@Síguenos",
             "contact": "Contacta"
         },
         "newsletter": {
-            "stay": "Mantente informado:",
+            "stay": "Manténte informado:",
             "toolbox" : "Actualiza tus herramientas de IA",
             "join": "¡Suscríbete a la newslettter de AI for Creatives y prepárate para disfrutar de tu creatividad!",
             "subscribe": "Subscríbete",
@@ -66,7 +66,7 @@
             "optimism": "optimismo y energías positivas",
             "humans": "conocer humanos increíbles",
             "catalog" : "Este catálogo lo mantiene",
-            "mission": "¡En esencia, nuestro objetivo es compartir la riqueza del conocimiento! Nuestra misión es crear una plataforma donde usted, ¡Tú! ¡Sí, tú! pueda acceder fácilmente y contribuir a una colección de información valiosa en rápida expansión. Únase a nosotros en la búsqueda y disfrute del conocimiento!"
+            "mission": "¡En esencia, nuestro objetivo es compartir la riqueza del conocimiento! Nuestra misión es crear una plataforma donde tú, ¡Tú! ¡Sí, tú! puedas acceder fácilmente y contribuir a una colección de información valiosa en rápida expansión. Únete a nosotros en la búsqueda y disfrute del conocimiento!"
         }
     },
     "Privacy": {
@@ -130,10 +130,10 @@
     },
     "Submit": {
         "headline": "Recomienda una herramienta",
-        "p1": "¿Estás preparado para deslumbrarnos con tus habilidades herramient-ásticas?",
+        "p1": "¿Estás preparado para deslumbrarnos con tus habilidades y conocimientos?",
         "p2": "Bueno, ponte tu cinturón de herramientas y ¡Empezemos!",
-        "headline2": "Curado por humanos",
-        "p3": "Vamos a asegurarnos que pasas el herramient-o-metro. Este dispositivo mide la genialidad de una herramienta en una escala de 'meh' a 'rompedora'. No aceptamos nada por debajo de 'super cool'. La curación es manual. En una semana, te notiicaremos con actualizaciones. ¡Recuerda, la seguridad es lo primero! Por favor, nada de herramientas que involucran tanques de tiburones o motores de jet. Estamos todavia recuperandonos de la última vez.",
+        "headline2": "Comisionado por humanos",
+        "p3": "Vamos a asegurarnos que pasas el 'herramient-o-metro'. Este dispositivo mide la genialidad de una herramienta en una escala de 'meh' a 'rompedora'. No aceptamos nada por debajo de 'super cool'. La curación es manual. En una semana, te contactaremos con actualizaciones. ¡Recuerda, la seguridad es lo primero! Por favor, nada de herramientas que incluyan tanques de tiburones o motores de jet. Estamos todavía recuperándonos de la última vez.",
         "thank": "Muchas gracias"
     },
     "Terms": {
