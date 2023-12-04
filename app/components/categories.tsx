@@ -59,7 +59,8 @@ export const Categories = ({
     };
 
     return (
-            <div className="text-standard max-w-[95vw] mx-auto mx-auto flex flex-row flex-wrap w-full sticky z-50 top-0 py-[3vh] backdrop-blur" id="categories">
+        <div className="w-full backdrop-blur sticky z-50 top-0 py-[3vh]">
+            <div className="text-standard max-w-[95vw] mx-auto mx-auto flex flex-row flex-wrap w-full" id="categories">
                 <div className="lg:block hidden">
                 <button 
                     onClick={() => onClick(undefined)}
@@ -130,5 +131,6 @@ export const Categories = ({
                     </div>
                 </div>
             </div>
+        </div>
     )
 }
