@@ -11,11 +11,19 @@ import FlipButton from './flipButton';
 import { ToolCounter } from "./toolcounter";
 
 interface ToolListProps {
-    data: CategoryType[];
+    data: ToolType[];
+    categories: CategoryType[];
     locale: string
 }
 
-interface CategoryType {
+interface CatgeoryType {
+    id:     string;
+    name:   string;
+    nameEs: string;
+    key:    string;
+}
+
+interface ToolType {
     categoryName:   string;
     name:           string;
     id:             string;
@@ -50,6 +58,7 @@ const toBase64 = (str: string) =>
 
 export const ToolList = ({
     data,
+    categories,
     locale
 }: ToolListProps) => {
 
@@ -68,6 +77,14 @@ export const ToolList = ({
     // Decide which data to display based on showAll
     const displayedData = showAll ? filteredData : filteredData.slice(0, defaultItems);
 
+    function getCategoryInLocale(searchCategory: string, locale: string) {
+        const foundCategories = categories.find(category => category.name === searchCategory);
+        if (locale === "en")
+            return foundCategories.name;
+        if (locale === "es") {
+            return foundCategories.nameEs;
+        }
+    }
 
 
     return (
@@ -119,7 +136,7 @@ export const ToolList = ({
                             pb-2
                             lg:pt-1
                             lg:pb-2
-                            '>{item.categoryName}</button>
+                            '>{getCategoryInLocale(item.categoryName, locale)}</button>
                         <FlipButton toolName={item.name} url={item.link}></FlipButton>
                     </div>
                     </div>

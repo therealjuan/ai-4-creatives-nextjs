@@ -24,7 +24,7 @@ const Home = async ({ params }: { params: { locale: string; }}) => {
         </div>
       </div>
       <Categories data={categories} locale={params.locale}></Categories>
-      <ToolList data={tools} locale={params.locale}></ToolList>
+      <ToolList data={tools} categories={categories} locale={params.locale}></ToolList>
     </main>
   )
 }
