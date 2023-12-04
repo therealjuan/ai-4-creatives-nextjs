@@ -16,7 +16,7 @@ interface ToolListProps {
     locale: string
 }
 
-interface CatgeoryType {
+interface CategoryType {
     id:     string;
     name:   string;
     nameEs: string;
