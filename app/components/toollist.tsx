@@ -17,10 +17,10 @@ interface ToolListProps {
 }
 
 interface CategoryType {
-    id:     string;
-    name:   string;
-    nameEs: string;
-    key:    string;
+    id:         string;
+    name:       string;
+    nameEs?:    string | null;
+    key:        string;
 }
 
 interface ToolType {
@@ -71,7 +71,7 @@ export const ToolList = ({
 
      // Filter the data based on selectedCategory
      const filteredData = selectedCategory
-     ? data.filter((item: CategoryType) => transformToString(item.categoryName) === selectedCategory)
+     ? data.filter((item: ToolType) => transformToString(item.categoryName) === selectedCategory)
      : data;
 
     // Decide which data to display based on showAll
@@ -79,11 +79,7 @@ export const ToolList = ({
 
     function getCategoryInLocale(searchCategory: string, locale: string) {
         const foundCategories = categories.find(category => category.name === searchCategory);
-        if (locale === "en")
-            return foundCategories.name;
-        if (locale === "es") {
-            return foundCategories.nameEs;
-        }
+        return locale === "en" ? foundCategories?.name : foundCategories?.nameEs;
     }
 
 
