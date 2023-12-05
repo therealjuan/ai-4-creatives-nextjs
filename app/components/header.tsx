@@ -32,19 +32,19 @@ export const Header = ({ follow, subscribe, contact, submit, extra, locale }: He
     return (
         <div className="w-[100vw] mx-auto absolute py-[4vh] max-lg:relative">
             <div className="flex flex-wrap justify-between items-center z-9 max-w-[95vw] w-full relative mx-auto">
-                <div className="flex items-center w-[28%] z-[99] max-lg:w-full max-lg:max-w-[25rem]">
+                <div className="flex items-center w-[28%] z-[99] max-lg:w-full max-lg:max-w-[20rem]">
                     <Link href="/" className='w-full'>
                         <Image src={logoAIforCreatives} className="w-full" alt="AI for Creatives"></Image>
                     </Link>
                 </div>
-                <div className='hidden max-lg:block pt-2 z-[99]'>
+                <div className='hidden max-lg:block pt-0 z-[99]'>
                     {!isMenuOpen ? (
                         <Button
                             className='bg-transparent hover:bg-transparent hover:text-green-500 border-0'
                             size="icon"
                             onClick={() => setIsMenuOpen(true)}
                         >
-                            <HamburgerMenuIcon className='w-10 h-10' />
+                            <HamburgerMenuIcon className='w-8 h-8' />
                         </Button>
                     ) : (
                         <Button
@@ -52,7 +52,7 @@ export const Header = ({ follow, subscribe, contact, submit, extra, locale }: He
                             size="icon"
                             onClick={() => setIsMenuOpen(false)}
                         >
-                            <Cross1Icon className='w-10 h-10' />
+                            <Cross1Icon className='w-8 h-8' />
                         </Button>
                     )}
                 </div>
