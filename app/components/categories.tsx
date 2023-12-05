@@ -124,8 +124,8 @@ export const Categories = ({
                     </select>
                     <div className="flex flex-row gap-2 w-full justify-between">
                     <button 
-                    onClick={() => scrollToElement("newsletter")} className="bg-transparent text-standard-2x text-green-500 border-b-1 mx-1 mb-2 border-b border-green-500 mt-2 hover:text-black hover:border-black">{t("subscribeForUpdates")}</button>
-                    <button className="w-[3.5vh] h-[3.5vh] relative float-right mt-1 max-lg:w-[34px]" id="scrollToBottom" onClick={() => scrollToElement("footer")}>
+                    onClick={() => scrollToElement("newsletter")} className="bg-transparent text-standard-2x text-green-500 border-b-1 mx-1 mb-2 border-b border-green-500 mt-2 hover:text-black hover:border-black">{t("subscribe")}<span className="max-lg:hidden">{t("forUpdates")}</span></button>
+                    <button className="w-[3.5vh] h-[3.5vh] relative self-center float-right mt-1 max-lg:w-[34px]" id="scrollToBottom" onClick={() => scrollToElement("footer")}>
                         <Image alt={t('scrollToBottom')} src={arrowImg} className="w-full" ></Image>
                     </button>
                     </div>

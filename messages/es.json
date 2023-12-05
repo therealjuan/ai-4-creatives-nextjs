@@ -17,7 +17,8 @@
         "categories": {
             "all": "Todas",
             "viewAll": "Ver todas las categorias",
-            "subscribeForUpdates": "Recibir novedades",
+            "subscribe": "Recibir novedades",
+            "forUpdates": "",
             "scrollToBottom": "Escrolar abajo"
         },
         "tools": {

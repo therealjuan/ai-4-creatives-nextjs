@@ -18,7 +18,8 @@
         "categories": {
             "all": "All",
             "viewAll": "View All",
-            "subscribeForUpdates": "Subscribe for updates",
+            "subscribe": "Subscribe",
+            "forUpdates": "for updates",
             "scrollToBottom": "Scroll to Bottom"
         },
         "tools": {
