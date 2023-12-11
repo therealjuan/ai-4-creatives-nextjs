@@ -56,8 +56,8 @@ export const Header = ({ follow, subscribe, contact, submit, extra, locale }: He
                         </Button>
                     )}
                 </div>
-                <div className={` w-[100vw] ${isMenuOpen ? `h-[100vh]` : `h-auto`}`}>
-                    <ul className={`text-standard h-[100vh] max-lg:text-2xl max-lg:block flex max-lg:absolute z-5 right-0 items-center max-lg:bg-black max-lg:text-white w-auto gap-6 pl-7 top-6 max-lg:left-[-2.5vw] max-lg:w-[100vw] max-lg:pt-24 max-lg:h-full z-[98] max-lg:pl-8 min-lg:py-0 transition-all ${isMenuOpen ? 'max-lg:top-[-4vh] h-[100vh]' : 'max-lg:top-[-105vh]'}`}>
+                <div className={`max-lg:w-[100vw] ${isMenuOpen ? `h-[100vh]` : `h-auto`}`}>
+                    <ul className={`text-standard max-lg:h-[100vh] max-lg:text-2xl max-lg:block flex max-lg:absolute z-5 right-0 items-center max-lg:bg-black max-lg:text-white w-auto gap-6 pl-7 top-6 max-lg:left-[-2.5vw] max-lg:w-[100vw] max-lg:pt-24 max-lg:h-full z-[98] max-lg:pl-8 min-lg:py-0 transition-all ${isMenuOpen ? 'max-lg:top-[-4vh] h-[100vh]' : 'max-lg:top-[-105vh]'}`}>
                         <li className="py-3 max-lg:py-4"><Link className="hover:text-green-500" href="https://twitter.com/ai_forcreatives" target="_blank">{follow}</Link></li>
                         <li className="py-3 max-lg:py-4"><a className="hover:text-green-500" href="mailto:hello@aiforcreativ.es">{contact}</a></li>
                         <li className="py-3 max-lg:py-4"><Link className="flex hover:text-green-500" href="/submit">{submit}<span className='float-right max-lg:ml-1.5 max-lg:block lg:hidden'>{extra}</span></Link></li>
