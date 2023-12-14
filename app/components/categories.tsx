@@ -105,7 +105,7 @@ export const Categories = ({
                         <Image alt={t('scrollToBottom')} src={arrowImg} className="w-full" ></Image>
                     </button>
                 </div>
-                
+
                 <div className="flex flex-column gap-6 lg:hidden w-full ">
                     <select 
                         id="categories-dropdown" 
